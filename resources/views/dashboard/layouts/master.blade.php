@@ -30,13 +30,13 @@ Author: Ali Rahmani
             overflow: scroll!important;
         }
         .dataTables_info{
-            font-family: BYekan!important;
+            font-family: iranyekan!important;
         }
         .custom-select{
             font-family: BYekan!important;
         }
         .page-link{
-            font-family: BYekan!important;
+            font-family: iranyekan!important;
         }
     </style>
 </head>
@@ -188,9 +188,9 @@ Author: Ali Rahmani
                     <div class="title-box">
                         <h6 class="menu-title">فروشگاه ساز</h6></div>
                     <ul class="nav">
-                        <li class="nav-item"><a class="nav-link" href="{{ route('shop.index') }}"><i class="dripicons-view-thumb"></i>گزارشات فروشگاه ها</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{{ route('product-category.index') }}"><i class="dripicons-trophy"></i> مدیریت فروشگاه ها</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{{ route('shop-setting.index') }}"><i class="dripicons-jewel"></i>تنظیمات فروشگاه ساز</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#"><i class="dripicons-view-thumb"></i>گزارشات فروشگاه ها</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ route('shops.index') }}"><i class="dripicons-trophy"></i> مدیریت فروشگاه ها</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#"><i class="dripicons-jewel"></i>تنظیمات فروشگاه ساز</a></li>
                     </ul>
                 </div>
                 <!-- end  Project-->

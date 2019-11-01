@@ -18,5 +18,14 @@ class Shop extends Model
    {
        return $this->hasMany('App\Product');
    }
+   public function user()
+   {
+       return $this->belongsTo('App\User');
+   }
+   public function category()
+   {
+       return $this->belongsTo('App\ShopCategory');
+   }
+
 
 }
