@@ -9,20 +9,31 @@ Author: Ali Rahmani
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <title>پایان پی - پنل ادمین</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta content="پایان پی - داشبورد اصلی" name="description">
-    <meta name="author" content="Setareh Nooran Co. Ali Rahmani">
-    <!-- App favicon -->
-    <link href="/dashboard/assets/plugins/jvectormap/jquery-jvectormap-2.0.2.css" rel="stylesheet">
-    <!-- App css -->
-    <link href="/dashboard/assets/css/jquery.steps.css" rel="stylesheet" type="text/css">
-    <link href="/dashboard/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-    <link href="/dashboard/assets/css/icons.css" rel="stylesheet" type="text/css">
-    <link href="/dashboard/assets/css/metisMenu.min.css" rel="stylesheet" type="text/css">
-    <link href="/dashboard/assets/css/style.css" rel="stylesheet" type="text/css">
-    <link href="/dashboard/assets/css/custom.css" rel="stylesheet" type="text/css">
+  <script src="/dashboard/assets/js/jquery.min.js"></script>
+  <script src="/dashboard/assets/js/jquery.form-xeditable.init.js"></script>
+  <script src="/dashboard/assets/js/bootstrap-editable.min.js"></script>
+  <meta charset="utf-8">
+  <title>{{ __('dashboard-layouts-master.pageTitle') }}</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta content="پایان پی - داشبورد اصلی" name="description">
+  <meta name="author" content="Setareh Nooran Co. Ali Rahmani">
+  <!-- App favicon -->
+  <link href="/dashboard/assets/plugins/jvectormap/jquery-jvectormap-2.0.2.css" rel="stylesheet">
+  <!-- App css -->
+  <link href="/dashboard/assets/css/bootstrap-editable.css" rel="stylesheet" type="text/css">
+  <link href="/dashboard/assets/css/jquery.steps.css" rel="stylesheet" type="text/css">
+  <link href="/dashboard/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="/dashboard/assets/css/icons.css" rel="stylesheet" type="text/css">
+  <link href="/dashboard/assets/css/metisMenu.min.css" rel="stylesheet" type="text/css">
+  <link href="/dashboard/assets/css/style.css" rel="stylesheet" type="text/css">
+  <link href="/dashboard/assets/css/color-option.css" rel="stylesheet" type="text/css">
+  <link href="/dashboard/assets/css/custom.css" rel="stylesheet" type="text/css">
+  <link href="/dashboard/assets/css/persian-datepicker.css" rel="stylesheet" type="text/css">
+  <link href="/app/css/toastr.min.css" rel="stylesheet" type="text/css">
+  <link href="/dashboard/assets/plugins/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css">
+  <link href="/dashboard/assets/plugins/datatables/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css">
+  <link href="/dashboard/assets/plugins/datatables/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css">
+  <link href="/dashboard/assets/css/dropify.min.css" rel="stylesheet" type="text/css">
     <meta name="csrf-token" id="csrf-token" content="{{ csrf_token() }}">
 
     <style>
@@ -312,54 +323,38 @@ Author: Ali Rahmani
 </div>
 <!-- end page-wrapper -->
 <!-- jQuery  -->
-<script src="/dashboard/assets/js/jquery.min.js"></script>
 <script src="/dashboard/assets/js/bootstrap.bundle.min.js"></script>
-<script src="/dashboard/assets/js/metisMenu.min.js"></script>
-<script src="/dashboard/assets/js/waves.min.js"></script>
-<script src="/dashboard/assets/js/jquery.slimscroll.min.js"></script>
-<script src="/dashboard/assets/plugins/moment/moment.js"></script>
-<script src="/dashboard/assets/plugins/apexcharts/apexcharts.min.js"></script>
-<script src="/dashboard/assets/plugins/jvectormap/jquery-jvectormap-2.0.2.min.js"></script>
-<script src="/dashboard/assets/plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
-<script src="/dashboard/assets/pages/jquery.eco_dashboard.init.js"></script>
-<script src="/dashboard/assets/js/jquery.form-wizard.init.js"></script>
-<script src="/dashboard/assets/js/jquery.steps.min.js"></script>
-<!-- App js -->
-<script src="/dashboard/assets/js/app.js"></script>
-<script src="/dashboard/assets/js/sweetalert.min.js"></script>
-@include('sweet::alert')
-@yield('pageScripts')
-
-<script>
-    $(window).on('load', function() {
-
-        // if (window.location.href.indexOf("wallet") == -1) {
-        //     $('#PardakhtYari').removeClass("active");
-        //     $("a[href$='PardakhtYari']").removeClass("active");
-        //
-        // }
-        // if (window.location.href.indexOf("card") == -1) {
-        //     $('#PardakhtYari').removeClass("active");
-        //     $("a[href$='PardakhtYari']").removeClass("active");
-        // }
-        //
-        //
-        //
-        // if (window.location.href.indexOf("wallet") > -1) {
-        //     $('#PardakhtYari').addClass("active");
-        //     $("a[href$='PardakhtYari']").addClass("active");
-        //
-        // }
-        // if (window.location.href.indexOf("card") > -1) {
-        //     $('#PardakhtYari').addeClass("active");
-        //     $("a[href$='PardakhtYari']").addClass("active");
-        // }
-
-
-
-        });
-
-</script>
+    <script src="/dashboard/assets/js/metisMenu.min.js"></script>
+    <script src="/dashboard/assets/js/waves.min.js"></script>
+    <script src="/dashboard/assets/js/jquery.slimscroll.min.js"></script>
+    <script src="/dashboard/assets/plugins/moment/moment.js"></script>
+    <script src="/dashboard/assets/js/bootstrap-editable.min.js"></script>
+    <script src="/dashboard/assets/js/jquery.form-xeditable.init.js"></script>
+    <script src="/dashboard/assets/plugins/apexcharts/apexcharts.min.js"></script>
+    <script src="/dashboard/assets/plugins/jvectormap/jquery-jvectormap-2.0.2.min.js"></script>
+    <script src="/dashboard/assets/plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+    <script src="/dashboard/assets/pages/jquery.eco_dashboard.init.js"></script>
+    <script src="/dashboard/assets/js/jquery.form-wizard.init.js"></script>
+    <script src="/dashboard/assets/js/jquery.steps.min.js"></script>
+    <!-- App js -->
+    <script src="/dashboard/assets/js/app.js"></script>
+    <script src="/dashboard/assets/js/sweetalert.min.js"></script>
+    <script src="/dashboard/assets/plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="/dashboard/assets/plugins/datatables/dataTables.bootstrap4.min.js"></script>
+    <script src="/dashboard/assets/plugins/datatables/dataTables.buttons.min.js"></script>
+    <script src="/dashboard/assets/plugins/datatables/dataTables.responsive.min.js"></script>
+    <script src="/dashboard/assets/plugins/datatables/responsive.bootstrap4.min.js"></script>
+    <script src="/dashboard/assets/plugins/datatables/jquery.datatable.init.js"></script>
+    <script src="/dashboard/assets/plugins/dropify/js/dropify.min.js"></script>
+    <script src="/dashboard/assets/pages/jquery.form-upload.init.js"></script>
+    <script>
+       $('#myInputTextField').keyup(function() {
+           oTable.search($(this).val()).draw();
+       })
+   </script>
+  
+    @include('sweet::alert')
+    @yield('pageScripts')
 </body>
 
 </html>

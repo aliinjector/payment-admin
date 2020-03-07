@@ -257,31 +257,8 @@
                     </div>
                     <!--end col-->
 
-                    <div class="col-xl-6">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="mt-0 header-title">آیکون فروشگاه</h4>
-                                <a class="mr-2 font-15" href="" id="icon-delete" title="حذف" data-type="icon" data-name="{{ \Auth::user()->shop()->first()->english_name }}" data-id="{{ \Auth::user()->shop()->first()->id }}"><i
-                                      class="far fa-trash-alt text-danger font-18 pl-2"></i>حذف</a>
-                                <input type="file" id="input-file-now" name="icon" class="dropify" data-default-file="{{ \Auth::user()->shop()->first()->icon['original'] }}">
-                            </div>
-                            <!--end card-body-->
-                        </div>
-                        <!--end card-->
-                    </div>
-                    <!--end col-->
-                    <div class="col-xl-6">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="mt-0 header-title">لوگوی فروشگاه</h4>
-                                <a class="mr-2 font-15" href="" id="icon-delete" title="حذف" data-type="logo" data-name="{{ \Auth::user()->shop()->first()->english_name }}" data-id="{{ \Auth::user()->shop()->first()->id }}"><i
-                                      class="far fa-trash-alt text-danger font-18 pl-2"></i>حذف</a>
-                                <input type="file" id="input-file-now" name="logo" class="dropify" data-default-file="{{ \Auth::user()->shop()->first()->logo['original'] }}">
-                            </div>
-                            <!--end card-body-->
-                        </div>
-                        <!--end card-->
-                    </div>
+
+
                 </div>
                 <div class="text-right mb-3">
                     <button data-toggle="modal" data-target="#AddWalletModal" type="submit" class="btn btn-success px-5 py-2  iranyekan rounded ">ثبت تغییرات</button><br>
@@ -290,7 +267,7 @@
         </div>
 
         <div class="tab-pane fade in show active" id="contact" role="tabpanel">
-      <form method="post" action="{{ route('shops.update', ['id' => \Auth::user()->shop()->first()->id, 'shop' => \Auth::user()->shop->english_name]) }}">
+      <form method="post" action="{{ route('shops.update-contact', ['id' => $shopInformation->id, 'shop' => \Auth::user()->shop->english_name]) }}">
           @csrf
           @method('PUT')
 

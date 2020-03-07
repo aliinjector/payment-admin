@@ -165,6 +165,34 @@ class ShopController extends Controller
           return redirect()->back();
         }
 
+
+
+
+        public function updateContact(ShopContactRequest $request, $id){
+
+          $shopOrg = Shop::find($id);
+
+    $shop = $shopOrg->shopContact()->get()->first()->update([
+    'tel' => $this->fa_num_to_en($request->tel),
+    'shop_email' => $request->shop_email,
+    'address' => $request->address,
+    'city' => $request->city,
+    'province' => $request->province,
+    'telegram_url' => $request->telegram_url,
+    'instagram_url' => $request->instagram_url,
+    'facebook_url' => $request->facebook_url,
+    'soroush_url' => $request->soroush_url,
+    'bisphone_url' => $request->bisphone_url,
+    'Igap_url' => $request->Igap_url,
+    'gap_url' => $request->gap_url,
+    'wispi_url' => $request->wispi_url,
+    'bale_url' => $request->bale_url,
+  ]);
+
+  alert()->success('تغییرات شما باموفقیت اضافه شد.', 'ثبت شد');
+  return redirect()->back();
+}
+
     /**
      * Remove the specified resource from storage.
      *

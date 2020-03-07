@@ -15,13 +15,13 @@ class ShopContactRequest extends FormRequest
      */
      public function authorize()
      {
-       $shop_userid = Shop::where('english_name', \request('shop'))->get()->first()->user_id;
-       if($shop_userid == \auth::user()->id){
+       // $shop_userid = Shop::where('english_name', \request('shop'))->get()->first()->user_id;
+       // if($shop_userid == \auth::user()->id){
          return true;
-       }
-       else{
-         return false;
-       }
+       // }
+       // else{
+       //   return false;
+       // }
      }
 
     /**
@@ -34,7 +34,7 @@ class ShopContactRequest extends FormRequest
         return [
               'city' => 'required|min:1|max:20|regex:/^[\pL\s\-]+$/u',
               'province' => 'required|min:1|max:20|regex:/^[\pL\s\-]+$/u',
-              'tel' => 'numeric|min:3|not_in:0|min:1|max:20',
+              'tel' => 'numeric|min:3|not_in:0|min:1',
               'address' => 'min:1|max:220',
               'shop_email' => 'string', 'email', 'max:255',
               'telegram_url' => 'max:220',

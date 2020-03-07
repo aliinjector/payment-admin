@@ -46,6 +46,7 @@ Route::namespace('Dashboard')->prefix('dashboard')->middleware('auth')->group(fu
     Route::group(['prefix' => 'shop'], function () {
 
     Route::resource('shops', 'ShopController');
+    Route::put('shops/{id}/update-contact', 'ShopController@updateContact')->name('shops.update-contact');
     Route::resource('shops-vouchers', 'ShopVoucherController');
     Route::get('shops-vouchers/{shopId}/vochers', 'ShopVoucherController@showVouchers')->name('shops-vouchers.vochers');
     Route::resource('shops-products', 'ShopProductController');
