@@ -41,6 +41,8 @@
 
                         <div class="row">
                             <div class="col-sm-12">
+                              <div class="table-responsive">
+
                                 <table id="datatable" class="table table-bordered dt-responsive nowrap dataTable no-footer" style="border-collapse: collapse; border-spacing: 0px; width: 100%;" role="grid" aria-describedby="datatable_info">
                                     <thead>
                                         <tr role="row">
@@ -50,16 +52,17 @@
                                             <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" aria-label="Status: activate to sort column ascending" style="width: 115px;">دسته بندی فروشگاه</th>
                                             <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" aria-label="Status: activate to sort column ascending" style="width: 115px;">وضعیت</th>
                                             <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" aria-label="Status: activate to sort column ascending" style="width: 115px;">تاریخ ایجاد فروشگاه</th>
+                                            <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" aria-label="Status: activate to sort column ascending" style="width: 115px;">عملیات</th>
                                         </tr>
                                     </thead>
                                     <tbody class="byekan">
 
                                         @foreach($shops as $shop)
                                         <tr role="row" class="odd">
-                                          <td class="iranyekan"><a href="{{ route('shops.show' , $shop->id) }}">{{ $shop->name }}</a></td>
+                                          <td class="iranyekan">{{ $shop->name }}</td>
                                             <td class="iranyekan"><a href="{{Request::root() . "/" . $shop->english_name }}" target="_blank">{{Request::root() . "/" . $shop->english_name }}</a></td>
-                                            <td class="iranyekan">{{ $shop->user()->get()->first()->email }}</td>
-                                            <td class="iranyekan">{{ $shop->category()->get()->first()->name }}</td>
+                                            <td class="iranyekan">{{ $shop->user->email }}</td>
+                                            <td class="iranyekan">{{ $shop->shopCategory()->get()->first()->name }}</td>
                                             @if ($shop->status == 1)
                                             <td class="iranyekan"><span class="badge badge-soft-success">
                                                     فعال
@@ -71,6 +74,10 @@
 
                                             @endif
                                              <td>{{ jdate($shop->created_at) }}</td>
+                                             <td><button type="button" class="btn btn-primary rounded">
+                                               <a href="{{ isset($action) ? route($action['url'], $shop->id) : route('shops.edit', $shop->id) }}" class="text-white">{{ isset($action) ? $action['name'] : 'تنظیمات' }}
+                                                 </a>
+                                             </button></td>
                                         </tr>
                                         @endforeach
 
@@ -81,6 +88,7 @@
                                   </p>
                                 @endif
                             </div>
+                          </div>
                         </div>
                     </div>
                 </div>

@@ -12,4 +12,13 @@ class Ticket extends Model
         return $this->belongsTo('App\User');
     }
 
+    public function answers(){
+      return $this->hasMany(Answer::class);
+    }
+
+    public function buzzes(){
+        return $this->hasMany(Buzz::class);
+    }
+
+
 }

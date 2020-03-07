@@ -38,22 +38,19 @@ Route::namespace('Dashboard')->prefix('dashboard')->middleware('auth')->group(fu
 
     Route::resource('bill', 'BillController');
     Route::resource('chequeInquiry', 'CheckInquiryController');
-    Route::resource('shop', 'ShopController');
     Route::resource('checkout', 'CheckoutController');
 
     Route::get('transactionReport/wallet/{wallet}', 'TransactionReportController@walletReport')->name('transactionReport.wallet');
     Route::get('transactionReport/gateway/{gateway}', 'TransactionReportController@gatewayReport')->name('transactionReport.gateway');
 
-    // Route::resource('product-list', 'ProductController');
-    // Route::get('product-list/product-category/{productCategory}/product/{productId}', 'ProductController@showProduct')->name('product-list.showProduct');
-    // Route::post('product-list/storeProduct', 'ProductController@storeProduct')->name('Product.storeProduct');
-    // Route::post('product-list/storeFile', 'ProductController@storeFile')->name('Product.storeFile');
-    // Route::post('product-list/storeService', 'ProductController@storeService')->name('Product.storeService');
-    // Route::post('product-list/delete', 'ProductController@destroy')->name('Product.destroy');
-    // Route::resource('product-detail', 'ProductDetailController');
-    // Route::resource('product-category', 'ProductCategoryController');
-    // Route::post('product-category/delete', 'ProductCategoryController@destroy');
-    // Route::resource('shop-setting', 'ShopSettingController');
+    Route::group(['prefix' => 'shop'], function () {
+
     Route::resource('shops', 'ShopController');
+    Route::resource('shops-vouchers', 'ShopVoucherController');
+    Route::get('shops-vouchers/{shopId}/vochers', 'ShopVoucherController@showVouchers')->name('shops-vouchers.vochers');
+    Route::resource('shops-products', 'ShopProductController');
+    Route::get('shops-products/{shopId}/products', 'ShopProductController@showProducts')->name('shops-products.products');
+  });
+
     Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout')->name('logout');
 });

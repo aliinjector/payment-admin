@@ -184,13 +184,22 @@ Author: Ali Rahmani
                     </ul>
                 </div>
                 <!-- end Crypto -->
-                <div id="PayanPayShopMaker" class="main-icon-menu-pane">
+                <div id="PayanPayShopMaker" class="main-icon-menu-pane {{ request()->is('*shop*') == 1 ? 'active' : '' }}">
                     <div class="title-box">
                         <h6 class="menu-title">فروشگاه ساز</h6></div>
                     <ul class="nav">
                         <li class="nav-item"><a class="nav-link" href="#"><i class="dripicons-view-thumb"></i>گزارشات فروشگاه ها</a></li>
                         <li class="nav-item"><a class="nav-link" href="{{ route('shops.index') }}"><i class="dripicons-trophy"></i> مدیریت فروشگاه ها</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#"><i class="dripicons-jewel"></i>تنظیمات فروشگاه ساز</a></li>
+                        <li class="nav-item"><a class="nav-link icon-hover" data-toggle="collapse" data-target="#shopproducts" aria-expanded="false" aria-controls="collapseCategory"><i class="far fa-edit"></i>محصولات فروشگاه ها</a></li>
+                            <div class="collapse mr-4 {{ request()->is('*shops-products*') == 1 ? 'show' : '' }}" id="shopproducts">
+                            <li class="nav-item"><a class="nav-link" href="{{ route('shops-products.index') }}"><i class="fa fa-copy"></i>جستوجو</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{ route('shops-products.show','shops') }}"><i class="fa fa-list-alt"></i>لیست فروشگاه ها</a></li>
+                            </div>
+                        <li class="nav-item"><a class="nav-link icon-hover" data-toggle="collapse" data-target="#shopvouchers" aria-expanded="false" aria-controls="collapseCategory"><i class="far fa-edit"></i>کد های تخفیف فروشگاه ها</a></li>
+                            <div class="collapse mr-4 {{ request()->is('*shops-vouchers*') == 1 ? 'show' : '' }}" id="shopvouchers">
+                            <li class="nav-item"><a class="nav-link" href="{{ route('shops-vouchers.index') }}"><i class="fa fa-copy"></i>جستوجو</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{ route('shops-vouchers.show','vochers') }}"><i class="fa fa-list-alt"></i>لیست فروشگاه ها</a></li>
+                            </div>
                     </ul>
                 </div>
                 <!-- end  Project-->

@@ -9,7 +9,7 @@ html {
 body {
     margin: 0;
     overflow-x: hidden;
-    font-size: 15px;
+    font-size: 13px;
     background-color: #eaf0f7;
     font-family: Poppins, sans-serif;
     color: #50649c
@@ -790,7 +790,8 @@ small {
 
 .main-menu-inner .menu-body .nav-item .nav-link.active,
 .main-menu-inner .menu-body .nav-item .nav-link.active i {
-    color: #122272
+    color: black;
+    font-weight: 800;
 }
 
 .main-menu-inner .menu-body .nav-item ul li {
@@ -4487,7 +4488,7 @@ dt {
 
 .modal-content {
     background-color: #f3f6f7;
-    border-radius: 0
+    /* border-radius: 0 */
 }
 
 .modal-content .modal-footer,
@@ -8445,7 +8446,7 @@ hr.thick {
 .shopping-cart table tbody td .product-name,
 .total-payment .table tbody td .product-name,
 .total-payment table tbody td .product-name {
-    font-size: 14px;
+    font-size: 16px;
     color: #50649c;
     font-weight: 500
 }
@@ -8738,7 +8739,8 @@ body {
     right: 48px;
     top: 31px;
 }
-.menu-active{
+
+.menu-active {
     color: white!important;
 }
 
@@ -9367,6 +9369,7 @@ button {
     font-family: iranyekan!important;
     font-weight: 600!important;
 }
+
 select {
     font-family: iranyekan!important;
     font-weight: 600!important;
