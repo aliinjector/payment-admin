@@ -61,7 +61,7 @@
                                         <tr role="row" class="odd">
                                           <td class="iranyekan">{{ $shop->name }}</td>
                                             <td class="iranyekan"><a href="{{Request::root() . "/" . $shop->english_name }}" target="_blank">{{Request::root() . "/" . $shop->english_name }}</a></td>
-                                            <td class="iranyekan">{{ $shop->user->email }}</td>
+                                            <td class="iranyekan">{{ isset($shop->user->email) ? $shop->user->email : '' }}</td>
                                             <td class="iranyekan">{{ $shop->shopCategory()->get()->first()->name }}</td>
                                             <td>
                                       @csrf {{ method_field('put') }}
@@ -91,10 +91,20 @@
                                       @endif
                                    </td>
                                              <td>{{ jdate($shop->created_at) }}</td>
-                                             <td><button type="button" class="btn btn-primary rounded">
+                                             <td>
+                                               <button type="button" class="btn btn-primary rounded">
                                                <a href="{{ isset($action) ? route($action['url'], $shop->id) : route('shops.edit', $shop->id) }}" class="text-white">{{ isset($action) ? $action['name'] : 'تنظیمات' }}
                                                  </a>
-                                             </button></td>
+
+                                             </button>
+                                             @if(!isset($action))
+                                               <button type="button" class="btn btn-dropbox rounded">
+                                                   <a href="localhost:8000/login021" target="_blank" class="text-white">
+                                                     ورود به فروشگاه
+                                                   </a>
+                                             </button>
+                                           @endif
+                                           </td>
                                         </tr>
                                         @endforeach
 
