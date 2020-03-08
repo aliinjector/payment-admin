@@ -63,16 +63,33 @@
                                             <td class="iranyekan"><a href="{{Request::root() . "/" . $shop->english_name }}" target="_blank">{{Request::root() . "/" . $shop->english_name }}</a></td>
                                             <td class="iranyekan">{{ $shop->user->email }}</td>
                                             <td class="iranyekan">{{ $shop->shopCategory()->get()->first()->name }}</td>
-                                            @if ($shop->status == 1)
-                                            <td class="iranyekan"><span class="badge badge-soft-success">
-                                                    فعال
-                                                </span></td>
-                                            @else
-                                            <td class="iranyekan"><span class="badge badge-soft-pink">
-                                                    غیرفعال
-                                                </span></td>
-
-                                            @endif
+                                            <td>
+                                      @csrf {{ method_field('put') }}
+                                      <button class="btn btn-link change" type="submit" data-id="{{ $shop->id }}">
+                                      @if($shop->status == 1)
+                                      <i class="fa fa-toggle-on text-success show{{ $shop->id }}"></i>
+                                      <i class="fa fa-toggle-off text-muted d-none {{ $shop->id }}"></i>
+                                      @else
+                                      <i class="fa fa-toggle-on text-success d-none {{ $shop->id }}"></i>
+                                      <i class="fa fa-toggle-off text-muted show{{ $shop->id }}"></i>
+                                      @endif
+                                      </button>
+                                      @if ($shop->status == 1)
+                                      <span class="badge badge-soft-success show{{ $shop->id }}">
+                                      {{ __('dashboard-shop-product-index.ListMahsoolatTableStatusEnable') }}
+                                      </span>
+                                      <span class="badge badge-soft-pink d-none {{ $shop->id }}">
+                                      {{ __('dashboard-shop-product-index.ListMahsoolatTableStatusDisable') }}
+                                      </span>
+                                      @else
+                                      <span class="badge badge-soft-success d-none {{ $shop->id }}">
+                                      {{ __('dashboard-shop-product-index.ListMahsoolatTableStatusEnable') }}
+                                      </span>
+                                      <span class="badge badge-soft-pink show{{ $shop->id }}">
+                                      {{ __('dashboard-shop-product-index.ListMahsoolatTableStatusDisable') }}
+                                      </span>
+                                      @endif
+                                   </td>
                                              <td>{{ jdate($shop->created_at) }}</td>
                                              <td><button type="button" class="btn btn-primary rounded">
                                                <a href="{{ isset($action) ? route($action['url'], $shop->id) : route('shops.edit', $shop->id) }}" class="text-white">{{ isset($action) ? $action['name'] : 'تنظیمات' }}
@@ -105,4 +122,26 @@
 <script src="/dashboard/assets/plugins/datatables/dataTables.responsive.min.js"></script>
 <script src="/dashboard/assets/plugins/datatables/responsive.bootstrap4.min.js"></script>
 <script src="/dashboard/assets/plugins/datatables/jquery.datatable.init.js"></script>
+<script type="text/javascript">
+$(".change").click(function() {
+  console.log('hi');
+      var id = $(this).data("id");
+      $.ajax({
+          url: "shops/change-status/" + id,
+          type: 'put',
+          dataType: "JSON",
+          data: {
+              "id": id,
+              "_method": 'put',
+              "_token": $('#csrf-token')[0].content,
+          }
+
+      });
+      $("i." + id).toggleClass("d-none");
+      $("span." + id).toggleClass("d-none");
+      $("i.show" + id).toggleClass("d-none");
+      $("span.show" + id).toggleClass("d-none");
+      toastr.success('انجام شد.', '', [])
+  });
+</script>
 @stop

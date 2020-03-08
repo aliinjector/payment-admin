@@ -34,7 +34,8 @@ Author: Ali Rahmani
   <link href="/dashboard/assets/plugins/datatables/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css">
   <link href="/dashboard/assets/plugins/datatables/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css">
   <link href="/dashboard/assets/css/dropify.min.css" rel="stylesheet" type="text/css">
-    <meta name="csrf-token" id="csrf-token" content="{{ csrf_token() }}">
+  <meta name="csrf-token" id="csrf-token" content="{{ csrf_token() }}">
+  @toastr_css
 
     <style>
         .main-icon-menu{
@@ -352,7 +353,8 @@ Author: Ali Rahmani
            oTable.search($(this).val()).draw();
        })
    </script>
-  
+      @toastr_js
+     @toastr_render
     @include('sweet::alert')
     @yield('pageScripts')
 </body>

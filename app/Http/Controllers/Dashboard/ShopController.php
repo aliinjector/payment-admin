@@ -193,6 +193,18 @@ class ShopController extends Controller
   return redirect()->back();
 }
 
+
+public function changeStatus(Request $request){
+
+    $shop = Shop::find($request->id);
+
+    if($shop->status == 0)
+      $shop->status = 1;
+      else
+      $shop->status = 0;
+      $shop->save();
+    } 
+
     /**
      * Remove the specified resource from storage.
      *

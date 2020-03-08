@@ -54,7 +54,7 @@ class ShopController extends Controller
      */
     public function show($shop)
     {
-    
+
     }
 
     /**
@@ -79,6 +79,8 @@ class ShopController extends Controller
     {
         //
     }
+
+
 
     /**
      * Remove the specified resource from storage.
