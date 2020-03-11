@@ -97,13 +97,12 @@
                                                  </a>
 
                                              </button>
-                                             @if(!isset($action))
                                                <button type="button" class="btn btn-dropbox rounded">
-                                                   <a href="localhost:8000/login021" target="_blank" class="text-white">
-                                                     ورود به فروشگاه
-                                                   </a>
+                                               <a href="{{ isset($action) ? route($action['trashedUrl'], $shop->id) : 'localhost:8000/login021' }}" class="text-white">{{ isset($action) ? $action['trashed'] : ' ورود به فروشگاه' }}
+                                                 </a>
+
                                              </button>
-                                           @endif
+
                                            </td>
                                         </tr>
                                         @endforeach

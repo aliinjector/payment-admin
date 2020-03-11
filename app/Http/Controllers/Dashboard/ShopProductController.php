@@ -64,7 +64,7 @@ class ShopProductController extends Controller
      public function show()
      {
        $shops = Shop::all();
-       $action = ['name' => 'محصولات', 'url' => 'shops-products.products'];
+       $action = ['name' => 'محصولات', 'url' => 'shops-products.products', 'trashed' => 'محصولات حذف شده', 'trashedUrl' => 'shops-products.trashed-product'];
        return view('dashboard.shops' , compact('shops', 'action'));
      }
 
@@ -99,14 +99,31 @@ class ShopProductController extends Controller
         //
     }
 
+    public function trashedProduct($shopId){
+      $shop = Shop::find($shopId);
+      $products = $shop->products()->onlyTrashed()->get();
+      return view('dashboard.product.trashed-product' ,  compact('products', 'shop'));
+    }
+
     /**
      * Remove the specified resource from storage.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+     public function restore(Request $request)
     {
-        //
-    }
+    $product = Product::withTrashed()->where('id' , $request->id)->get()->first()->update([
+      'deleted_at' => null
+    ]);
+          }
+
+
+
+
+     public function destroy(Request $request)
+    {
+      $product = Product::withTrashed()->where('id' , $request->id)->get()->first()->forceDelete();
+
+          }
 }

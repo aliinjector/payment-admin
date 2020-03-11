@@ -9,7 +9,7 @@ html {
 body {
     margin: 0;
     overflow-x: hidden;
-    font-size: 13px;
+    /* font-size: 13px; */
     background-color: #eaf0f7;
     font-family: Poppins, sans-serif;
     color: #50649c

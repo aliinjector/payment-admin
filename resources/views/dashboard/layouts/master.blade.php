@@ -9,6 +9,8 @@ Author: Ali Rahmani
 <html lang="en">
 
 <head>
+
+
   <script src="/dashboard/assets/js/jquery.min.js"></script>
   <script src="/dashboard/assets/js/jquery.form-xeditable.init.js"></script>
   <script src="/dashboard/assets/js/bootstrap-editable.min.js"></script>
@@ -34,6 +36,8 @@ Author: Ali Rahmani
   <link href="/dashboard/assets/plugins/datatables/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css">
   <link href="/dashboard/assets/plugins/datatables/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css">
   <link href="/dashboard/assets/css/dropify.min.css" rel="stylesheet" type="text/css">
+  <link href="/dashboard/assets/css/search.css" rel="stylesheet" type="text/css">
+  <link href="/dashboard/assets/css/btn.css" rel="stylesheet" type="text/css">
   <meta name="csrf-token" id="csrf-token" content="{{ csrf_token() }}">
   @toastr_css
 
@@ -212,6 +216,11 @@ Author: Ali Rahmani
                             <li class="nav-item"><a class="nav-link" href="{{ route('shops-vouchers.index') }}"><i class="fa fa-copy"></i>جستوجو</a></li>
                             <li class="nav-item"><a class="nav-link" href="{{ route('shops-vouchers.show','vochers') }}"><i class="fa fa-list-alt"></i>لیست فروشگاه ها</a></li>
                             </div>
+                              <li class="nav-item"><a class="nav-link icon-hover" data-toggle="collapse" data-target="#shopcomments" aria-expanded="false" aria-controls="collapseCategory"><i class="fas fa-comment"></i>نظرات فروشگاه ها</a></li>
+                            <div class="collapse mr-4 {{ request()->is('*shops-comments*') == 1 ? 'show' : '' }}" id="shopcomments">
+                            <li class="nav-item"><a class="nav-link" href="{{ route('shops-comments.index') }}"><i class="fa fa-copy"></i>جستوجو</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{ route('shops-comments.show','comments') }}"><i class="fa fa-list-alt"></i>لیست فروشگاه ها</a></li>
+                            </div>
                     </ul>
                 </div>
                 <!-- end  Project-->
@@ -324,7 +333,8 @@ Author: Ali Rahmani
 </div>
 <!-- end page-wrapper -->
 <!-- jQuery  -->
-<script src="/dashboard/assets/js/bootstrap.bundle.min.js"></script>
+
+    <script src="/dashboard/assets/js/bootstrap.bundle.min.js"></script>
     <script src="/dashboard/assets/js/metisMenu.min.js"></script>
     <script src="/dashboard/assets/js/waves.min.js"></script>
     <script src="/dashboard/assets/js/jquery.slimscroll.min.js"></script>
@@ -353,10 +363,12 @@ Author: Ali Rahmani
            oTable.search($(this).val()).draw();
        })
    </script>
-      @toastr_js
-     @toastr_render
+    @toastr_js
+    @toastr_render
     @include('sweet::alert')
     @yield('pageScripts')
 </body>
+
+</html>
 
 </html>
