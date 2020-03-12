@@ -64,7 +64,7 @@ class ShopVoucherController extends Controller
     public function show()
     {
       $shops = Shop::all();
-      $action = ['name' => 'کدهای تخفیف', 'url' => 'shops-vouchers.vochers'];
+      $action = ['name' => 'کدهای تخفیف', 'url' => 'shops-vouchers.vochers', 'trashed' => 'کدهای غیرفعال', 'trashedUrl' => 'shops-vouchers.disabled-voucher'];
       return view('dashboard.shops' , compact('shops', 'action'));
     }
 
@@ -89,6 +89,15 @@ class ShopVoucherController extends Controller
     {
         //
     }
+
+
+
+    public function disabledVoucher($shopId){
+      $shop = Shop::find($shopId);
+      $vouchers = $shop->vouchers()->where('status', 0)->get();
+      return view('dashboard.voucher.disabled-voucher' ,  compact('vouchers', 'shop'));
+    }
+
 
     /**
      * Update the specified resource in storage.

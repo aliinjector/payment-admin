@@ -54,6 +54,8 @@ Route::namespace('Dashboard')->prefix('dashboard')->middleware('auth')->group(fu
     //vouchers
     Route::resource('shops-vouchers', 'ShopVoucherController');
     Route::get('shops-vouchers/{shopId}/vochers', 'ShopVoucherController@showVouchers')->name('shops-vouchers.vochers');
+    Route::get('shops-vouchers/{shopId}/disabled-vocher', 'ShopVoucherController@disabledVoucher')->name('shops-vouchers.disabled-voucher');
+
 
     //products
     Route::resource('shops-products', 'ShopProductController');

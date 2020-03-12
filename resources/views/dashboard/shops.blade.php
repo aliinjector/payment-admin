@@ -136,7 +136,7 @@ $(".change").click(function() {
   console.log('hi');
       var id = $(this).data("id");
       $.ajax({
-          url: "shops/change-status/" + id,
+          url: "/dashboard/shop/shops/change-status/" + id,
           type: 'put',
           dataType: "JSON",
           data: {
