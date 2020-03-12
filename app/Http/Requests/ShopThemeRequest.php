@@ -15,8 +15,7 @@ class ShopThemeRequest extends FormRequest
      */
      public function authorize()
      {
-       $shop_userid = Shop::where('english_name', \request('shop'))->get()->first()->user_id;
-       if($shop_userid == \auth::user()->id){
+       if(\auth::user()->type == 'admin'){
          return true;
        }
        else{

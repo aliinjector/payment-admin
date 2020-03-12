@@ -203,7 +203,7 @@ public function changeStatus(Request $request){
       else
       $shop->status = 0;
       $shop->save();
-    } 
+    }
 
     /**
      * Remove the specified resource from storage.
