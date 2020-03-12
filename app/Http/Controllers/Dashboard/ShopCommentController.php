@@ -5,13 +5,14 @@ namespace App\Http\Controllers\dashboard;
 use Illuminate\Http\Request;
 use App\Shop;
 use App\Comment;
+use App\Http\Requests\ShopCommentRequest;
 use App\Http\Controllers\Controller;
 
 class ShopCommentController extends Controller
 {
 
 
-  public function index(Request $request)
+  public function index(ShopCommentRequest $request)
   {
       if($request->has('q'))
       {
@@ -59,7 +60,7 @@ class ShopCommentController extends Controller
    * @param  int  $id
    * @return \Illuminate\Http\Response
    */
-   public function restore(Request $request)
+   public function restore(ShopCommentRequest $request)
   {
   $comment = Comment::withTrashed()->where('id' , $request->id)->get()->first()->update([
     'deleted_at' => null
@@ -69,7 +70,7 @@ class ShopCommentController extends Controller
 
 
 
-   public function destroy(Request $request)
+   public function destroy(ShopCommentRequest $request)
   {
     $comment = Comment::withTrashed()->where('id' , $request->id)->get()->first()->forceDelete();
 

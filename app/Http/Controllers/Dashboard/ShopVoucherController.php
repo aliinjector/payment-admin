@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Voucher;
 use App\Shop;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\ShopVoucherRequest;
+
 
 
 class ShopVoucherController extends Controller
@@ -15,7 +17,7 @@ class ShopVoucherController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request)
+    public function index(ShopVoucherRequest $request)
     {
         if($request->has('q'))
         {

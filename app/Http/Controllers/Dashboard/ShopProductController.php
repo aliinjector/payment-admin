@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Product;
 use App\Shop;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\ShopProductRequest;
+
 
 class ShopProductController extends Controller
 {
@@ -14,7 +16,7 @@ class ShopProductController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-     public function index(Request $request)
+     public function index(ShopProductRequest $request)
      {
          if($request->has('q'))
          {
@@ -94,7 +96,7 @@ class ShopProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(ShopProductRequest $request, $id)
     {
         //
     }
@@ -111,7 +113,7 @@ class ShopProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-     public function restore(Request $request)
+     public function restore(ShopProductRequest $request)
     {
     $product = Product::withTrashed()->where('id' , $request->id)->get()->first()->update([
       'deleted_at' => null
@@ -121,7 +123,7 @@ class ShopProductController extends Controller
 
 
 
-     public function destroy(Request $request)
+     public function destroy(ShopProductRequest $request)
     {
       $product = Product::withTrashed()->where('id' , $request->id)->get()->first()->forceDelete();
 

@@ -211,7 +211,7 @@ Author: Ali Rahmani
                             <li class="nav-item"><a class="nav-link" href="{{ route('shops-products.index') }}"><i class="fa fa-copy"></i>جستوجو</a></li>
                             <li class="nav-item"><a class="nav-link" href="{{ route('shops-products.show','shops') }}"><i class="fa fa-list-alt"></i>لیست فروشگاه ها</a></li>
                             </div>
-                        <li class="nav-item"><a class="nav-link icon-hover" data-toggle="collapse" data-target="#shopvouchers" aria-expanded="false" aria-controls="collapseCategory"><i class="far fa-edit"></i>کد های تخفیف فروشگاه ها</a></li>
+                        <li class="nav-item"><a class="nav-link icon-hover" data-toggle="collapse" data-target="#shopvouchers" aria-expanded="false" aria-controls="collapseCategory"><i class="fa fa-calendar"></i>کد های تخفیف فروشگاه ها</a></li>
                             <div class="collapse mr-4 {{ request()->is('*shops-vouchers*') == 1 ? 'show' : '' }}" id="shopvouchers">
                             <li class="nav-item"><a class="nav-link" href="{{ route('shops-vouchers.index') }}"><i class="fa fa-copy"></i>جستوجو</a></li>
                             <li class="nav-item"><a class="nav-link" href="{{ route('shops-vouchers.show','vochers') }}"><i class="fa fa-list-alt"></i>لیست فروشگاه ها</a></li>
