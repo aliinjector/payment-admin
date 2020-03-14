@@ -131,10 +131,10 @@
 
                 e.preventDefault();
                 var id = $(this).data('id');
-                swal(` ${'حذف محصول:'} ${name} | ${'آیا اطمینان دارید؟'}`, {
+                swal(` ${'بازگردانی:'} ${name} | ${'آیا اطمینان دارید؟'}`, {
                         dangerMode: true,
                         icon: "warning",
-                        buttons: ["انصراف", "حذف"],
+                        buttons: ["انصراف", "بازگردانی"],
                     })
                     .then(function(isConfirm) {
                             if (isConfirm) {
@@ -164,7 +164,7 @@
     $(document).on('click', '#removerComment', function(e) {
         e.preventDefault();
         var id = $(this).data('id');
-        swal(` ${'حذف محصول:'} ${name} | ${'آیا اطمینان دارید؟'}`, {
+        swal(` ${'حذف نظر:'} ${name} | ${'آیا اطمینان دارید؟'}`, {
                 dangerMode: true,
                 icon: "warning",
                 buttons: ["انصراف", "حذف"],

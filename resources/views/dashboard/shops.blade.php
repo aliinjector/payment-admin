@@ -133,7 +133,6 @@
 <script src="/dashboard/assets/plugins/datatables/jquery.datatable.init.js"></script>
 <script type="text/javascript">
 $(".change").click(function() {
-  console.log('hi');
       var id = $(this).data("id");
       $.ajax({
           url: "/dashboard/shop/shops/change-status/" + id,
