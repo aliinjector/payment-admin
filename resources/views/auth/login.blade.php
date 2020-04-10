@@ -7,7 +7,7 @@
     <title>امید شاپ - ورود به پنل ادمین</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="author" content="Ali Rahmani">
-    <meta name="description" content="راهکار های نوین پرداخت پین پی">
+    <meta name="description" content="راهکار های نوین پرداخت امید شاپ">
     <!-- App favicon -->
     <link rel="shortcut icon" href="/dashboard/assets//images/favicon.ico">
     <!-- App css -->

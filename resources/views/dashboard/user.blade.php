@@ -19,7 +19,7 @@
                 <div class="float-right">
                     <ol style="direction: ltr" class="breadcrumb">
                         <li class="breadcrumb-item"><a href="">مدیریت کاربران</a></li>
-                        <li class="breadcrumb-item active">پنل مدیریت پین پی</li>
+                        <li class="breadcrumb-item active">پنل مدیریت امید شاپ</li>
                     </ol>
                 </div>
                 <h4 class="page-title">داشبورد اصلی</h4></div>

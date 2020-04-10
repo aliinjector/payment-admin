@@ -77,7 +77,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Payan Pay Admin Panel
+                    Omid Shop Admin Panel
                 </div>
 
             </div>

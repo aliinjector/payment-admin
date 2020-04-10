@@ -99,7 +99,7 @@ Author: Ali Rahmani
             </li>
             <li class="hide-phone app-search">
                 <form role="search" class="">
-                    <input type="text" placeholder="جستجو ..." class="form-control"> <a href="#"><i class="fas fa-search"></i></a></form>
+                    <input type="text" placeholder="نام فروشگاه ..." class="form-control"> <a href="#"><i class="fas fa-search"></i></a></form>
             </li>
         </ul>
     </nav>
@@ -165,9 +165,6 @@ Author: Ali Rahmani
                 </a>
 
 
-                <a href="#OmidShopMarketing" class="nav-link" data-toggle="tooltip-custom" data-placement="top" title="" data-original-title="مدیریت مارکتینگ">
-                    <i style="color: #86a3f7;font-size: 25px" class="dripicons-user-group"></i>
-                </a>
 
 
                 <!--end OmidShopAuthentication-->
@@ -208,17 +205,17 @@ Author: Ali Rahmani
                         <li class="nav-item"><a class="nav-link" href="{{ route('shops.index') }}"><i class="dripicons-trophy"></i> مدیریت فروشگاه ها</a></li>
                         <li class="nav-item"><a class="nav-link icon-hover" data-toggle="collapse" data-target="#shopproducts" aria-expanded="false" aria-controls="collapseCategory"><i class="far fa-edit"></i>محصولات فروشگاه ها</a></li>
                             <div class="collapse mr-4 {{ request()->is('*shops-products*') == 1 ? 'show' : '' }}" id="shopproducts">
-                            <li class="nav-item"><a class="nav-link" href="{{ route('shops-products.index') }}"><i class="fa fa-copy"></i>جستوجو</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{ route('shops-products.index') }}"><i class="fa fa-copy"></i>جستجو</a></li>
                             <li class="nav-item"><a class="nav-link" href="{{ route('shops-products.show','shops') }}"><i class="fa fa-list-alt"></i>لیست فروشگاه ها</a></li>
                             </div>
                         <li class="nav-item"><a class="nav-link icon-hover" data-toggle="collapse" data-target="#shopvouchers" aria-expanded="false" aria-controls="collapseCategory"><i class="fa fa-calendar"></i>کد های تخفیف فروشگاه ها</a></li>
                             <div class="collapse mr-4 {{ request()->is('*shops-vouchers*') == 1 ? 'show' : '' }}" id="shopvouchers">
-                            <li class="nav-item"><a class="nav-link" href="{{ route('shops-vouchers.index') }}"><i class="fa fa-copy"></i>جستوجو</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{ route('shops-vouchers.index') }}"><i class="fa fa-copy"></i>جستجو</a></li>
                             <li class="nav-item"><a class="nav-link" href="{{ route('shops-vouchers.show','vochers') }}"><i class="fa fa-list-alt"></i>لیست فروشگاه ها</a></li>
                             </div>
                               <li class="nav-item"><a class="nav-link icon-hover" data-toggle="collapse" data-target="#shopcomments" aria-expanded="false" aria-controls="collapseCategory"><i class="fas fa-comment"></i>نظرات فروشگاه ها</a></li>
                             <div class="collapse mr-4 {{ request()->is('*shops-comments*') == 1 ? 'show' : '' }}" id="shopcomments">
-                            <li class="nav-item"><a class="nav-link" href="{{ route('shops-comments.index') }}"><i class="fa fa-copy"></i>جستوجو</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{ route('shops-comments.index') }}"><i class="fa fa-copy"></i>جستجو</a></li>
                             <li class="nav-item"><a class="nav-link" href="{{ route('shops-comments.show','comments') }}"><i class="fa fa-list-alt"></i>لیست فروشگاه ها</a></li>
                             </div>
                     </ul>
@@ -285,28 +282,6 @@ Author: Ali Rahmani
                     </ul>
                 </div>
                 <!-- end TPG -->
-
-
-
-                <div id="OmidShopMarketing" class="main-icon-menu-pane">
-                    <div class="title-box">
-                        <h6 class="menu-title">مدیریت مارکتینگ</h6></div>
-                    <ul class="nav">
-                        <li class="nav-item"><a class="nav-link" href="{{ route('chequeInquiry.index') }}"><i class="dripicons-jewel"></i>لیست مشتریان</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{{ route('chequeInquiry.index') }}"><i class="dripicons-jewel"></i> ارتباط با مشتریان</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{{ route('chequeInquiry.index') }}"><i class="dripicons-jewel"></i>خبرنامه ها</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{{ route('chequeInquiry.index') }}"><i class="dripicons-jewel"></i>بلاگ </a></li>
-                        <li class="nav-item"><a class="nav-link" href="{{ route('chequeInquiry.index') }}"><i class="dripicons-jewel"></i>شبکه های اجتماعی </a></li>
-                        <li class="nav-item"><a class="nav-link" href="{{ route('chequeInquiry.index') }}"><i class="dripicons-jewel"></i>ایمیل مارکتینگ </a></li>
-                        <li class="nav-item"><a class="nav-link" href="{{ route('chequeInquiry.index') }}"><i class="dripicons-jewel"></i>اس ام اس مارکتینگ </a></li>
-                        <li class="nav-item"><a class="nav-link" href="{{ route('chequeInquiry.index') }}"><i class="dripicons-jewel"></i>مدیریت رقبا </a></li>
-                        <li class="nav-item"><a class="nav-link" href="{{ route('chequeInquiry.index') }}"><i class="dripicons-jewel"></i>کانال های فروش </a></li>
-                        <li class="nav-item"><a class="nav-link" href="{{ route('chequeInquiry.index') }}"><i class="dripicons-jewel"></i>کمپین های تبلیغاتی </a></li>
-
-                    </ul>
-                </div>
-                <!-- end TPG -->
-
 
 
 
