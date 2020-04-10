@@ -7,11 +7,11 @@
     <meta name="author" content="Setareh Nooran Co. Ali Rahmani">
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="راهکار های نوین پرداخت پایان پی">
+    <meta name="description" content="راهکار های نوین پرداخت امید شاپ">
     <!-- Fav Icon  -->
 {{--    <link rel="shortcut icon" href="../images/favicon.png">--}}
     <!-- Site Title  -->
-    <title>پایان پی - راهکار های نوین پرداخت پایان پی</title>
+    <title>امید شاپ - راهکار های نوین پرداخت امید شاپ</title>
     <!-- Bundle and Base CSS -->
     <link rel="stylesheet" href="/assets/css/vendor.bundlee332.css?ver=161">
     <link rel="stylesheet" href="/assets/css/stylee332.css?ver=161">
@@ -66,11 +66,11 @@
                                 </li>
 
                                 <li class="menu-item">
-                                    <a class="menu-link nav-link" href="#">درباره پایان پی</a>
+                                    <a class="menu-link nav-link" href="#">درباره امید شاپ</a>
                                 </li>
 
                                 <li class="menu-item">
-                                    <a class="menu-link nav-link" href="#"> خدمات پایان پی </a>
+                                    <a class="menu-link nav-link" href="#"> خدمات امید شاپ </a>
                                 </li>
 
                                 <li class="menu-item">
@@ -127,7 +127,7 @@
                                         </div>
                                         <div class="cpn-action">
                                             <div class="cpn-btns animated" data-animate="fadeInUp" data-delay="1.2">
-                                                <a class="btn btn-grad" href="{{ route('register') }}">عضویت در سیستم پایان پی</a>
+                                                <a class="btn btn-grad" href="{{ route('register') }}">عضویت در سیستم امید شاپ</a>
                                             </div>
                                             <ul class="cpn-links animated" data-animate="fadeInUp" data-delay="1.3">
                                                 <li><a class="link" href="#"><em class="link-icon far fa-file-alt"></em>مراحل احراز هویت پرداخت یاری</a></li>
@@ -187,7 +187,7 @@
                                 <p class="animated" data-animate="fadeInUp" data-delay=".2"><strong> شرکت فناور ستاره نوران</strong>با تـوجه به تنـوع بسترهایـی که کاربر از طریـق آن پرداخت اینترنتی را انجام می دهد تلاش نموده تا به روزترین درگاه‌های پرداخت را در اختیارشان قرار دهد.</p>
                                 <p class="animated" data-animate="fadeInUp" data-delay=".3">                                    با استفـاده از نرم ا فزار پرداخت یاری  شرکت فناور ستاره نوران ، دارندگان کارت های بانکـی عضو شبـکه شتـاب، قـادر خـواهنـد بود به صورت غیرحضوری کالا و خدمات مورد نیاز خود را از طریق وب سایت پذیرندگان اینترنتی خریداری و دریافت کنند. </p>
                                 <p class="animated" data-animate="fadeInUp" data-delay=".4">در حال حاضر یکی از مهمترین برنامه های این شرکت ارایه سامانه های پرداخت الکترونیک و سایر خدمات مبتنی بر پرداخت که در ذیل به آن اشاره شده است می باشد. </p>
-                                <p class="animated" data-animate="fadeInUp" data-delay=".5">لازم به ذکراست فعالیت های سامانه پایان پی محدود به سیستم پرداخت یاری نمیباشد و در زمینه های دیگری اعم از: فروشگاه ساز، باشگاه مشتریان، فروشگاه ساز شارژ، سیستم پرداخت قبوض، سرویس پرداخت عوارض و فروش بلیط، سیستم شارژ ساختمان، سرویس استعلام چک و درگاه پرداخت تلفنی نیز فعالیت دارد. </p>
+                                <p class="animated" data-animate="fadeInUp" data-delay=".5">لازم به ذکراست فعالیت های سامانه امید شاپ محدود به سیستم پرداخت یاری نمیباشد و در زمینه های دیگری اعم از: فروشگاه ساز، باشگاه مشتریان، فروشگاه ساز شارژ، سیستم پرداخت قبوض، سرویس پرداخت عوارض و فروش بلیط، سیستم شارژ ساختمان، سرویس استعلام چک و درگاه پرداخت تلفنی نیز فعالیت دارد. </p>
                             </div>
                         </div>
                         <div class="col-lg-6">
@@ -200,7 +200,7 @@
                 </div><!-- .block @e -->
                 <!-- Section Head @s -->
                 <div class="section-head">
-                    <h2 class="title title-lg animated" data-animate="fadeInUp" data-delay=".6">مزایای سامانه پایان پی</h2>
+                    <h2 class="title title-lg animated" data-animate="fadeInUp" data-delay=".6">مزایای سامانه امید شاپ</h2>
                 </div><!-- .section-head @e -->
                 <!-- Block @s -->
                 <div class="nk-block nk-block-features mgb-m30">
@@ -212,7 +212,7 @@
                                 </div>
                                 <div class="feature-text">
                                     <h5 class="title title-sm">عدم لزوم نصب نرم افزار</h5>
-                                    <p> باتوجه به تحت وب بودن سامانه پایان پی، نیازی به نصب نرم افزار نمیباشد و تنها با داشتن اینترنت میتوان از مزایای سامانه بهره مند شد.  </p>
+                                    <p> باتوجه به تحت وب بودن سامانه امید شاپ، نیازی به نصب نرم افزار نمیباشد و تنها با داشتن اینترنت میتوان از مزایای سامانه بهره مند شد.  </p>
                                 </div>
                             </div>
                         </div>
@@ -223,7 +223,7 @@
                                 </div>
                                 <div class="feature-text">
                                     <h5 class="title title-sm">گزارشات لحظه ای برخط</h5>
-                                    <p> در سامانه پایان پی قابلیت گزارش گیری در قالب نمودار های متنوع، جداول شخصی سازی شده و فیلتر شده بر اساس معیار های مختلف و... فراهم میباشد.  </p>
+                                    <p> در سامانه امید شاپ قابلیت گزارش گیری در قالب نمودار های متنوع، جداول شخصی سازی شده و فیلتر شده بر اساس معیار های مختلف و... فراهم میباشد.  </p>
                                 </div>
                             </div>
                         </div>
@@ -234,7 +234,7 @@
                                 </div>
                                 <div class="feature-text">
                                     <h5 class="title title-sm">استفاده از طریق تمام پلتفرم ها</h5>
-                                    <p> باتوجه به رسپانسیو بودن قالب سامانه پایان پی، قابلیت بهره مندی از تمامی قابلیت های سامانه از تمام پلتفرم ها فراهم میباشد.  </p>
+                                    <p> باتوجه به رسپانسیو بودن قالب سامانه امید شاپ، قابلیت بهره مندی از تمامی قابلیت های سامانه از تمام پلتفرم ها فراهم میباشد.  </p>
                                 </div>
                             </div>
                         </div>
@@ -260,7 +260,7 @@
                             <div class="section-head">
                                 <h2 class="title animated" data-animate="fadeInUp" data-delay=".2">مراحل عضویت و استفاده از سیستم </h2>
                                 <p class="animated" data-animate="fadeInUp" data-delay=".3">
-                                    باتوجه به تعهد شرکت فناور ستاره نوران به ایجاد ساختاری امن و قابل اطمینان برای تمامی ذینفعان خدمات، استفاده از پلتفرم پایان پی ملزم به احراز هویت کاربران میباشد که در ادامه با فرآیند مربوطه آشنا خواهید شد.
+                                    باتوجه به تعهد شرکت فناور ستاره نوران به ایجاد ساختاری امن و قابل اطمینان برای تمامی ذینفعان خدمات، استفاده از پلتفرم امید شاپ ملزم به احراز هویت کاربران میباشد که در ادامه با فرآیند مربوطه آشنا خواهید شد.
                                 </p>
                             </div><!-- .section-head @e -->
                             <div class="features-list mr-4 mgb-m30">
@@ -279,7 +279,7 @@
                                     </div>
                                     <div class="feature-text">
                                         <h5 class="title title-sm">مرحله ۲) احراز هویت</h5>
-                                        <p>با ورود به منو تکمیل اطلاعات و احراز هویت و وارد نمودن اطلاعات در سامانه پایان پی، فرآیند احراز هویت شما آغاز شده و تیم مدیریت پایان پی به سرعت اطلاعات هویتی شمارا بررسی خواهند کرد.</p>
+                                        <p>با ورود به منو تکمیل اطلاعات و احراز هویت و وارد نمودن اطلاعات در سامانه امید شاپ، فرآیند احراز هویت شما آغاز شده و تیم مدیریت امید شاپ به سرعت اطلاعات هویتی شمارا بررسی خواهند کرد.</p>
                                     </div>
                                 </div>
                                 <div class="feature feature-s2 animated" data-animate="fadeInUp" data-delay=".6">
@@ -288,7 +288,7 @@
                                     </div>
                                     <div class="feature-text">
                                         <h5 class="title title-sm">مرحله ۳) فعالسازی خدمات</h5>
-                                        <p> پس از احراز هویت شما میتوانید بدون محدودیت از تمامی ماژول ها و خدمات سامانه پایان پی استفاده نمایید.</p>
+                                        <p> پس از احراز هویت شما میتوانید بدون محدودیت از تمامی ماژول ها و خدمات سامانه امید شاپ استفاده نمایید.</p>
                                     </div>
                                 </div>
                             </div>
@@ -304,8 +304,8 @@
             <div class="container">
                 <!-- Section Head @s -->
                 <div class="section-head text-center wide-auto-sm">
-                    <h2 class="title animated" data-animate="fadeInUp" data-delay=".1">راهکار های کلیدی سامانه پایان پی</h2>
-                    <p class="animated" data-animate="fadeInUp" data-delay=".2">در این قسمت لیست خدمات اصلی سامانه پایان پی را مشاهده مینمایید</p>
+                    <h2 class="title animated" data-animate="fadeInUp" data-delay=".1">راهکار های کلیدی سامانه امید شاپ</h2>
+                    <p class="animated" data-animate="fadeInUp" data-delay=".2">در این قسمت لیست خدمات اصلی سامانه امید شاپ را مشاهده مینمایید</p>
                 </div><!-- .section-head @e -->
                 <!-- Block @s -->
                 <div class="nk-block nk-block-problems tc-light">
@@ -331,7 +331,7 @@
                                     <div class="feature-text">
                                         <h4 class="title title-md">سیستم فروشگاه ساز</h4>
                                         <p>
-                                            باتوجه به نیاز کسب و کار های کوچک به ارایه خدمات و محصولات در محیط اینترنت و ارتباط با سیستم بانکی، سیستم فروشگاه ساز سامانه پایان پی میتواند در کمترین زمان ممکن فروشگاه شخصی سازی شده را ساخته و در اختیار فعالین در این عرصه قرار دهد.
+                                            باتوجه به نیاز کسب و کار های کوچک به ارایه خدمات و محصولات در محیط اینترنت و ارتباط با سیستم بانکی، سیستم فروشگاه ساز سامانه امید شاپ میتواند در کمترین زمان ممکن فروشگاه شخصی سازی شده را ساخته و در اختیار فعالین در این عرصه قرار دهد.
                                         </p>
                                     </div>
                                 </div>
@@ -363,8 +363,8 @@
             <div class="container">
                 <!-- Section Head @s -->
                 <div class="section-head text-center wide-auto-sm">
-                    <h2 class="title animated" data-animate="fadeInUp" data-delay=".1">سایر خدمات پایان پی</h2>
-                    <p class="animated" data-animate="fadeInUp" data-delay=".2">در این قسمت سایر خدمات سامانه پایان پی را مشاهده مینمایید</p>
+                    <h2 class="title animated" data-animate="fadeInUp" data-delay=".1">سایر خدمات امید شاپ</h2>
+                    <p class="animated" data-animate="fadeInUp" data-delay=".2">در این قسمت سایر خدمات سامانه امید شاپ را مشاهده مینمایید</p>
                 </div><!-- .section-head @e -->
                 <!-- Block @s -->
                 <div class="nk-block nk-block-features-s3 mgb-m40 mgt-m20">
@@ -376,7 +376,7 @@
                                 </div>
                                 <div class="feature-text">
                                     <h4 class="title title-md title-dark">پرداخت قبوض</h4>
-                                    <p> امکان افزودن قبوض به سیستم پایان پی جهت یادآوری و پرداخت گروهی قبوض فراهم میباشد. </p>
+                                    <p> امکان افزودن قبوض به سیستم امید شاپ جهت یادآوری و پرداخت گروهی قبوض فراهم میباشد. </p>
                                 </div>
                             </div>
                         </div><!-- .col -->
@@ -420,7 +420,7 @@
                                 </div>
                                 <div class="feature-text">
                                     <h4 class="title title-md title-dark">سرویس استعلام چک</h4>
-                                    <p>کاربران پایان پی می توانند با وارد نمودن شناسه استعلام 16 رقمی مندرج در چک های صیادی در سامانه استعلام چک پایان پی، از وضعیت اعتباری صادرکننده چک مطلع شوند.</p>
+                                    <p>کاربران امید شاپ می توانند با وارد نمودن شناسه استعلام 16 رقمی مندرج در چک های صیادی در سامانه استعلام چک امید شاپ، از وضعیت اعتباری صادرکننده چک مطلع شوند.</p>
                                 </div>
                             </div>
                         </div><!-- .col -->
@@ -450,7 +450,7 @@
                     <!-- Section Head @s -->
                     <div class="section-head text-center wide-auto">
                         <h2 class="title animated" data-animate="fadeInUp" data-delay=".1">سیستم تسهیم و باشگاه مشتریان</h2>
-                        <p class="animated" data-animate="fadeInUp" data-delay=".2">جزییات سیستم تسهیم و باشگاه مشتریان پایان پی</p>
+                        <p class="animated" data-animate="fadeInUp" data-delay=".2">جزییات سیستم تسهیم و باشگاه مشتریان امید شاپ</p>
                     </div><!-- .section-head @e -->
                     <!-- Block @s -->
                     <div class="nk-block nk-block-token mgb-m30">
@@ -549,7 +549,7 @@
                                     <div class="col-md-6">
                                         <div class="nk-block-text">
                                             <h4 class="title title-md">مستندات فنی</h4>
-                                            <p> تیم برنامه نویسی پایان پی، با درنظر گرفتن نیاز تمامی کاربران محترم سامانه اقدام به ایجاد فایل های ویدیویی آموزشی مربوط به تمامی قسمت های سامانه و پلاگین ها برای انواع سیستم های محتوی و فریم ورک های وب کرده و شما کاربران گرامی میتوانید با ورود به بخش مستندات از این فایل ها استفاده نمایید.    </p>
+                                            <p> تیم برنامه نویسی امید شاپ، با درنظر گرفتن نیاز تمامی کاربران محترم سامانه اقدام به ایجاد فایل های ویدیویی آموزشی مربوط به تمامی قسمت های سامانه و پلاگین ها برای انواع سیستم های محتوی و فریم ورک های وب کرده و شما کاربران گرامی میتوانید با ورود به بخش مستندات از این فایل ها استفاده نمایید.    </p>
                                             <ul class="btn-grp gutter-30px gutter-vr-20px">
                                                 <li><a href="#" class="btn btn-grad">ورود به بخش مستندات</a></li>
                                                 <li><a href="#" class="link"><em class="link-icon fas fa-file-alt"></em> دریافت فایل </a></li>
@@ -582,7 +582,7 @@
                         </div>
                         <div class="col-lg-5 col-md-10 text-center text-lg-left">
                             <div class="nk-block-text">
-                                <h2 class="title animated" data-animate="fadeInUp" data-delay=".1">نرم افزار موبایل <br class="d-none d-md-block"> پایان پی</h2>
+                                <h2 class="title animated" data-animate="fadeInUp" data-delay=".1">نرم افزار موبایل <br class="d-none d-md-block"> امید شاپ</h2>
                                 <p class="animated" data-animate="fadeInUp" data-delay=".2"> باتوجه به افزایش روز افزودن باتوجه به افزایش روز افزودن باتوجه به افزایش روز افزودن باتوجه به افزایش روز افزودن باتوجه به افزایش روز افزودن باتوجه به افزایش روز افزودن باتوجه به افزایش روز افزودن  </p>
                                 <div class="pdt-m animated" data-animate="fadeInUp" data-delay=".3">
                                     <a href="#" class="btn btn-grad">به زودی</a>
@@ -600,24 +600,24 @@
             <div class="container">
                 <!-- Block @s -->
                 <div class="nk-block nk-block-text-grp mgb-m30">
-                    <h6 class="title title-xs tc-primary pdb-s animated" data-animate="fadeInUp" data-delay=".4">استاندارد های پایان پی</h6>
+                    <h6 class="title title-xs tc-primary pdb-s animated" data-animate="fadeInUp" data-delay=".4">استاندارد های امید شاپ</h6>
                     <div class="row">
                         <div class="col-lg-4">
                             <div class="feature feature-s5 animated" data-animate="fadeInUp" data-delay=".5">
                                 <h4 class="title title-md">ضمانت پرداخت</h4>
-                                <p> یکی از روش‌های موثر برای کاهش درد پرداخت، تضمین بازگشت وجه به خریدار است. ضمانت پرداخت پایان پی در خریدار ایجاد اطمینان می‌کند.</p>
+                                <p> یکی از روش‌های موثر برای کاهش درد پرداخت، تضمین بازگشت وجه به خریدار است. ضمانت پرداخت امید شاپ در خریدار ایجاد اطمینان می‌کند.</p>
                             </div>
                         </div>
                         <div class="col-lg-4">
                             <div class="feature feature-s5 animated" data-animate="fadeInUp" data-delay=".6">
                                 <h4 class="title title-md">پشتیبانی</h4>
-                                <p> همراه طلایی بودن به واسطه‌ی پشتیبانی ۲۴ ساعته و وجود متنوع‌ترین پلاگین‌های پرداخت، می‌توانند معرف خوبی از عبارت پایان پی باشند.</p>
+                                <p> همراه طلایی بودن به واسطه‌ی پشتیبانی ۲۴ ساعته و وجود متنوع‌ترین پلاگین‌های پرداخت، می‌توانند معرف خوبی از عبارت امید شاپ باشند.</p>
                             </div>
                         </div>
                         <div class="col-lg-4">
                             <div class="feature feature-s5 animated" data-animate="fadeInUp" data-delay=".7">
                                 <h4 class="title title-md">امنیت</h4>
-                                <p> در تجارت الکترونیک استقرار امنیت حکم ستون نگه‌دارنده‌ای را دارد که اگر نباشد همه چیز فرو خواهد ریخت. پایان پی تکیه‌گاه محکمی است.</p>
+                                <p> در تجارت الکترونیک استقرار امنیت حکم ستون نگه‌دارنده‌ای را دارد که اگر نباشد همه چیز فرو خواهد ریخت. امید شاپ تکیه‌گاه محکمی است.</p>
                             </div>
                         </div>
                     </div><!-- .row -->
@@ -641,7 +641,7 @@
                             <div class="nk-block-text">
                                 <h6 class="title title-xs tc-primary animated" data-animate="fadeInUp" data-delay=".1">داشبورد مدیریت آنلاین</h6>
                                 <h2 class="title animated" data-animate="fadeInUp" data-delay=".2"> گزارشات لحظه ای</h2>
-                                <p class="animated" data-animate="fadeInUp" data-delay=".3">سامانه پایان پی، با بهره گیری از بروز ترین تکنولوژی روز دنیا در ارایه گزارشات لحظه ای گامی نو برداشته است..</p>
+                                <p class="animated" data-animate="fadeInUp" data-delay=".3">سامانه امید شاپ، با بهره گیری از بروز ترین تکنولوژی روز دنیا در ارایه گزارشات لحظه ای گامی نو برداشته است..</p>
                                 <ul class="list list-check animated" data-animate="fadeInUp" data-delay=".4">
                                     <li>گزارشات گردش حساب</li>
                                     <li>گزارشات بازه زمانی</li>
@@ -663,9 +663,9 @@
             <div class="container">
                 <!-- Section Head @s -->
                 <div class="section-head text-center wide-auto">
-                    <h6 class="title title-xs title-light animated" data-animate="fadeInUp" data-delay=".1">مسیر بهره گیری از خدمات پایان پی</h6>
-                    <h2 class="title title-lg title-dark animated" data-animate="fadeInUp" data-delay=".2">مراحل عضویت و استفاده از خدمات پایان پی</h2>
-                    <p class="animated" data-animate="fadeInUp" data-delay=".3">مراحل عضویت و استفاده از سیستم پایان پی به شرح زیر میباشد</p>
+                    <h6 class="title title-xs title-light animated" data-animate="fadeInUp" data-delay=".1">مسیر بهره گیری از خدمات امید شاپ</h6>
+                    <h2 class="title title-lg title-dark animated" data-animate="fadeInUp" data-delay=".2">مراحل عضویت و استفاده از خدمات امید شاپ</h2>
+                    <p class="animated" data-animate="fadeInUp" data-delay=".3">مراحل عضویت و استفاده از سیستم امید شاپ به شرح زیر میباشد</p>
                 </div><!-- .section-head @e -->
                 <!-- Block @s -->
                 <div class="nk-block nk-block-roadmap">
@@ -692,7 +692,7 @@
                                         <div class="roadmap-head">
                                             <span class="roadmap-title">احراز هویت</span>
                                         </div>
-                                        <p> با ورود به منو تکمیل اطلاعات و احراز هویت و وارد نمودن اطلاعات در سامانه پایان پی، فرآیند احراز هویت شما آغاز شده و تیم مدیریت پایان پی به سرعت اطلاعات هویتی شمارا بررسی خواهند کرد.</p>
+                                        <p> با ورود به منو تکمیل اطلاعات و احراز هویت و وارد نمودن اطلاعات در سامانه امید شاپ، فرآیند احراز هویت شما آغاز شده و تیم مدیریت امید شاپ به سرعت اطلاعات هویتی شمارا بررسی خواهند کرد.</p>
                                     </div>
                                 </div>
 
@@ -705,7 +705,7 @@
                                         <div class="roadmap-head">
                                             <span class="roadmap-title">استفاده از سیستم</span>
                                         </div>
-                                        <p> پس از احراز هویت شما میتوانید بدون محدودیت از تمامی ماژول ها و خدمات سامانه پایان پی استفاده نمایید.</p>
+                                        <p> پس از احراز هویت شما میتوانید بدون محدودیت از تمامی ماژول ها و خدمات سامانه امید شاپ استفاده نمایید.</p>
                                     </div>
                                 </div>
 
@@ -726,7 +726,7 @@
                 <!-- Section Head @s -->
                 <div class="section-head text-center wide-auto">
                     <h2 class="title animated" data-animate="fadeInUp" data-delay=".1">سوالات متداول</h2>
-                    <p class="animated" data-animate="fadeInUp" data-delay=".2">در این قسمت، سوالات متداول کاربران پایان پی </p>
+                    <p class="animated" data-animate="fadeInUp" data-delay=".2">در این قسمت، سوالات متداول کاربران امید شاپ </p>
                 </div><!-- .section-head @e -->
                 <!-- Block @s -->
                 <div class="nk-block block-faq">
@@ -957,7 +957,7 @@
                                         <li>
                                             <em class="contact-icon fas fa-paper-plane"></em>
                                             <div class="contact-text">
-                                                <span> عضویت در کانال تلگرام پایان پی</span>
+                                                <span> عضویت در کانال تلگرام امید شاپ</span>
                                             </div>
                                         </li>
                                     </ul>
@@ -989,11 +989,11 @@
                     <div class="row">
                         <div class="col-lg-2 col-sm-4 mb-4 mb-sm-0">
                             <div class="wgs wgs-menu animated" data-animate="fadeInUp" data-delay=".2">
-                                <h6 class="wgs-title">پایان پی</h6>
+                                <h6 class="wgs-title">امید شاپ</h6>
                                 <div class="wgs-body">
                                     <ul class="wgs-links">
                                         <li><a href="#">درباره ما</a></li>
-                                        <li><a href="#">خدمات پایان پی</a></li>
+                                        <li><a href="#">خدمات امید شاپ</a></li>
                                         <li><a href="#">مستندات</a></li>
                                         <li><a href="#">آموزش</a></li>
                                     </ul>
