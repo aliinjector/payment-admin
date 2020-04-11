@@ -15,4 +15,12 @@ class ShopCategory extends Model
     {
         return $this->hasMany('App\Shop');
     }
+    public function children()
+   {
+     return $this->hasMany($this, 'parent_id')->with('children');
+   }
+  public function parent()
+   {
+     return $this->belongsTo($this, 'parent_id')->with('parent');
+   }
 }

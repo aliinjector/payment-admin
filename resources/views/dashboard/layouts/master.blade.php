@@ -218,6 +218,8 @@ Author: Ali Rahmani
                             <li class="nav-item"><a class="nav-link" href="{{ route('shops-comments.index') }}"><i class="fa fa-copy"></i>جستجو</a></li>
                             <li class="nav-item"><a class="nav-link" href="{{ route('shops-comments.show','comments') }}"><i class="fa fa-list-alt"></i>لیست فروشگاه ها</a></li>
                             </div>
+                            <li class="nav-item"><a class="nav-link" href="{{ route('shop-category.index') }}"><i class="dripicons-trophy"></i>دسته بندی های فروشگاه ها</a></li>
+
                     </ul>
                 </div>
                 <!-- end  Project-->

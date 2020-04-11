@@ -73,6 +73,10 @@ Route::namespace('Dashboard')->prefix('dashboard')->middleware('auth')->group(fu
     Route::put('shops-comments/{shopId}/trashed-comment/restore', 'ShopCommentController@restore')->name('shops-comments.restore');
     Route::get('shops-comments/{shopId}/comments', 'ShopCommentController@showComments')->name('shops-comments.comments');
 
+    //shop-category
+     Route::resource('shop-category', 'ShopCategoryController');
+     Route::post('shop-category/delete', 'ShopCategoryController@destroy')->name('shop-category.delete');
+     
   });
 
     Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout')->name('logout');
