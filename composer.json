@@ -9,11 +9,26 @@
     "license": "MIT",
     "require": {
         "php": "^7.1.3",
+        "algolia/algoliasearch-client-php": "2.2",
+        "artesaos/seotools": "^0.16.0",
+        "barryvdh/laravel-cors": "^0.11.4",
+        "biscolab/laravel-recaptcha": "^4.1",
+        "cviebrock/eloquent-sluggable": "4.8",
+        "doctrine/dbal": "^2.10",
+        "elasticsearch/elasticsearch": "^5.0",
         "fideloper/proxy": "^4.0",
+        "ghanem/rating": "^1.4",
+        "guzzlehttp/guzzle": "^6.3",
+        "iatstuti/laravel-cascade-soft-deletes": "^1.5",
         "intervention/image": "^2.5",
+        "jenssegers/agent": "^2.6",
         "laravel/framework": "5.8.*",
+        "laravel/passport": "^7.5",
+        "laravel/scout": "^7.2",
         "laravel/tinker": "^1.0",
         "morilog/jalali": "3.*",
+        "pulkitjalan/geoip": "^4.0",
+        "tamayo/laravel-scout-elastic": "^5.0",
         "uxweb/sweet-alert": "^2.0",
         "yoeunes/toastr": "^1.2"
     },
@@ -23,6 +38,7 @@
         "fzaninotto/faker": "^1.4",
         "mockery/mockery": "^1.0",
         "nunomaduro/collision": "^3.0",
+        "psy/psysh": "^0",
         "phpunit/phpunit": "^7.5"
     },
     "config": {
@@ -36,6 +52,9 @@
         }
     },
     "autoload": {
+        "files": [
+            "app/helpers.php"
+        ],
         "psr-4": {
             "App\\": "app/"
         },

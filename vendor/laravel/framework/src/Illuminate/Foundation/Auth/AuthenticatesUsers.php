@@ -119,11 +119,7 @@ trait AuthenticatesUsers
      */
     protected function authenticated(Request $request, $user)
     {
-        if($user->type !== 'admin'){
-            \Auth::logout();
-            return abort(403);
-            exit;
-        }
+        //
     }
 
     /**

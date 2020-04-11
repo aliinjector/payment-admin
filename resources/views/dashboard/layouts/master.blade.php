@@ -174,7 +174,7 @@ Author: Ali Rahmani
         <!--end main-icon-menu-->
         <div class="main-menu-inner">
             <div class="menu-body slimscroll">
-                <div id="OmidShopDashboard" class="main-icon-menu-pane">
+                <div id="OmidShopDashboard" class="main-icon-menu-pane {{ request()->is('dashboard/user/*') == 1 ? 'active' : '' }}">
                     <div class="title-box">
                         <h6 class="menu-title">داشبورد اصلی</h6></div>
                     <ul class="nav">

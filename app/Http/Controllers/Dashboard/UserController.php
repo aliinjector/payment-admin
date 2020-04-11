@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Dashboard;
 use App\User;
 use App\Dashboard;
 use App\Http\Requests\UserRequest;
+use App\Http\Requests\UserPanelUpdateRequest;
 use App\UserInformation;
 use Illuminate\Http\Request;
 
@@ -54,7 +55,35 @@ class UserController extends \App\Http\Controllers\Controller
      */
     public function show(User $user)
     {
-        //
+      return view('dashboard.user-edit', compact('user'));
+    }
+
+
+    public function updateUser(UserPanelUpdateRequest $request, $id)
+    {
+      $user = User::find($id);
+      //check if icon is null or not
+     if($request->file('avatar') != null){
+       $avatar = $this->uploadFile($request->file('avatar'), false, false);
+     }
+     else{
+       $avatar =  $user->avatar;
+     }
+     if($request->info_status != $user->userInformation->status){
+       $userInfo = $user->userInformation->update([
+         'status' => $request->info_status,
+       ]);
+     }
+     $user = $user->update([
+     'firstName' => $request->firstName,
+     'lastName' => $request->lastName,
+     'email' => $request->email,
+     'status' => $request->status,
+     'mobile' => $this->fa_num_to_en($request->mobile),
+     'avatar' => $avatar
+     ]);
+     alert()->success('اطلاعات شما با موفقیت ویرایش شد.', 'انجام شد');
+     return redirect()->back();
     }
 
     /**

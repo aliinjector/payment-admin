@@ -15,12 +15,14 @@ class CheckAuth
      */
     public function handle($request, Closure $next)
     {
+      if(\Route::currentRouteName() != 'login'){
         if (\Auth::user()->type != 'admin') {
             return redirect()->route('logout');
             exit;
         } else {
             return $next($request);
         }
+      }
+
     }
 }
-

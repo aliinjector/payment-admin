@@ -105,7 +105,8 @@
 
                         </thead>
                         <tbody>
-                        @foreach ($users as $user)
+                          {{-- {{ dd($users) }} --}}
+                        @foreach ($users->where('id', 1) as $user)
                             <tr>
                                 <td>{{ $user->firstName }}</td>
                                 <td>{{ $user->lastName }}</td>
@@ -116,7 +117,7 @@
                                 <td style="font-family: BYekan; direction: ltr">{{ jdate($user->created_at) }}</td>
                                 <td style="font-family: BYekan; direction: ltr">{{ jdate($user->updated_at) }}</td>
                                 <td><span class="badge badge-primary">{{ $user->userInformation->status }}</span></td>
-                               <td><button type="button" class="btn btn-dark waves-effect success" data-toggle="modal" data-animation="bounce" data-target="#ticketDetail{{$user->id}}">ویرایش و حذف</button></td>
+                               <td><a href="{{ route('user.show', $user->id) }}"> <button type="button" class="btn btn-dark waves-effect success" data-toggle="modal" data-animation="bounce" data-target="#ticketDetail{{$user->id}}">ویرایش و حذف</button></a></td>
                             </tr>
                         @endforeach
                         </tbody>

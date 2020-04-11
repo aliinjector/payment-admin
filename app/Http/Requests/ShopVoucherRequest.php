@@ -11,12 +11,13 @@ class ShopVoucherRequest extends FormRequest
      *
      * @return bool
      */
-    public function authorize()
+    public function authorize(){
     if(\auth::user()->type == 'admin'){
       return true;
     }
     else{
       return false;
+    }
     }
 
     /**

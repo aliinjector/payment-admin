@@ -24,6 +24,7 @@ Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout')->name
 Route::namespace('Dashboard')->prefix('dashboard')->middleware('auth')->group(function () {
     Route::resource('index', 'DashboardController');
     Route::resource('UserInformation', 'UserInformationController');
+    Route::put('user/user-edit/{id}/update', 'UserController@updateUser')->name('user.user-edit.update');
     Route::resource('user', 'UserController');
     Route::resource('ticket', 'TicketController');
     Route::resource('setting', 'SettingController');
