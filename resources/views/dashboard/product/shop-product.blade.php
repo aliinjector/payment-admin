@@ -56,7 +56,7 @@
 
 
                 <div class="ctn mb-5 mt-3 row justify-content-center">
-                    <a  href="javascript:$('#srch').submit();" id="showShops" class="button2 b-blue rot-135">جستوجو</a>
+                    <a  href="javascript:$('#srch').submit();" id="showShops" class="button2 b-blue rot-135">جستجو</a>
                 </div>
 
 
@@ -75,7 +75,7 @@
                                     <div class="col-sm-12">
                                         <div class="table-responsive">
 
-                                            <table id="datatable" class="table table-bordered dt-responsive nowrap dataTable no-footer" style="border-collapse: collapse; border-spacing: 0px; width: 100%;" role="grid"
+                                            <table id="datatable" class="table table-bordered dt-responsive dataTable no-footer" style="border-collapse: collapse; border-spacing: 0px; width: 100%;" role="grid"
                                               aria-describedby="datatable_info">
                                                 <thead>
                                                     <tr role="row">

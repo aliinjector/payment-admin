@@ -17,7 +17,7 @@ Author: Ali Rahmani
   <meta charset="utf-8">
   <title>{{ __('dashboard-layouts-master.pageTitle') }}</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta content="پایان پی - داشبورد اصلی" name="description">
+  <meta content="امید شاپ - داشبورد اصلی" name="description">
   <meta name="author" content="Setareh Nooran Co. Ali Rahmani">
   <!-- App favicon -->
   <link href="/dashboard/assets/plugins/jvectormap/jquery-jvectormap-2.0.2.css" rel="stylesheet">
@@ -99,7 +99,7 @@ Author: Ali Rahmani
             </li>
             <li class="hide-phone app-search">
                 <form role="search" class="">
-                    <input type="text" placeholder="جستجو ..." class="form-control"> <a href="#"><i class="fas fa-search"></i></a></form>
+                    <input type="text" placeholder="نام فروشگاه ..." class="form-control"> <a href="#"><i class="fas fa-search"></i></a></form>
             </li>
         </ul>
     </nav>
@@ -112,28 +112,28 @@ Author: Ali Rahmani
         <div class="main-icon-menu">
             <nav class="nav">
 
-                <a href="#PayanPayDashboard" class="nav-link {{ request()->is('dashboard/UserInformation*') == 1 ? 'active' : '' }} {{ request()->is('dashboard/UserInformation*') == 1 ? 'active' : '' }} {{ request()->is('dashboard/index*') == 1 ? 'active' : '' }} {{ request()->is('dashboard/ticket*') == 1 ? 'active' : '' }} {{ request()->is('dashboard/setting*') == 1 ? 'active' : '' }} " data-toggle="tooltip-custom" data-placement="top" title="" data-original-title="داشبورد اصلی" >
+                <a href="#OmidShopDashboard" class="nav-link {{ request()->is('dashboard/UserInformation*') == 1 ? 'active' : '' }} {{ request()->is('dashboard/UserInformation*') == 1 ? 'active' : '' }} {{ request()->is('dashboard/index*') == 1 ? 'active' : '' }} {{ request()->is('dashboard/ticket*') == 1 ? 'active' : '' }} {{ request()->is('dashboard/setting*') == 1 ? 'active' : '' }} " data-toggle="tooltip-custom" data-placement="top" title="" data-original-title="داشبورد اصلی" >
                     <i style="color: #86a3f7;font-size: 25px" class="  {{ request()->is('dashboard/UserInformation*') == 1 ? 'menu-active' : '' }} {{ request()->is('dashboard/UserInformation*') == 1 ? 'menu-active' : '' }} {{ request()->is('dashboard/index*') == 1 ? 'menu-active' : '' }} {{ request()->is('dashboard/ticket*') == 1 ? 'menu-active' : '' }} {{ request()->is('dashboard/setting*') == 1 ? 'menu-active' : '' }} mdi mdi-desktop-mac-dashboard"></i>
                 </a>
 
 
-                <a href="#PayanPayPardakhtYari" class="nav-link" data-toggle="tooltip-custom" data-placement="top" title="" data-original-title="پرداخت یاری" >
+                <a href="#OmidShopPardakhtYari" class="nav-link" data-toggle="tooltip-custom" data-placement="top" title="" data-original-title="پرداخت یاری" >
                     <svg class="nav-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M435.2 80H76.8c-24.9 0-44.6 19.6-44.6 44L32 388c0 24.4 19.9 44 44.8 44h358.4c24.9 0 44.8-19.6 44.8-44V124c0-24.4-19.9-44-44.8-44zm0 308H76.8V256h358.4v132zm0-220H76.8v-44h358.4v44z"></path></svg>
                 </a>
 
 
-                <a href="#PayanPayShopMaker" class="nav-link" data-toggle="tooltip-custom" data-placement="top" title="" data-original-title="فروشگاه ساز">
+                <a href="#OmidShopShopMaker" class="nav-link" data-toggle="tooltip-custom" data-placement="top" title="" data-original-title="فروشگاه ساز">
                     <svg class="nav-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M169.6 377.6c-22.882 0-41.6 18.718-41.6 41.601 0 22.882 18.718 41.6 41.6 41.6s41.601-18.718 41.601-41.6c-.001-22.884-18.72-41.601-41.601-41.601zM48 51.2v41.6h41.6l74.883 151.682-31.308 50.954c-3.118 5.2-5.2 12.482-5.2 19.765 0 27.85 19.025 41.6 44.825 41.6H416v-40H177.893c-3.118 0-5.2-2.082-5.2-5.2 0-1.036 2.207-5.2 2.207-5.2l20.782-32.8h154.954c15.601 0 29.128-8.317 36.4-21.836l74.882-128.8c1.237-2.461 2.082-6.246 2.082-10.399 0-11.446-9.364-19.765-20.8-19.765H135.364L115.6 51.2H48zm326.399 326.4c-22.882 0-41.6 18.718-41.6 41.601 0 22.882 18.718 41.6 41.6 41.6S416 442.082 416 419.2c0-22.883-18.719-41.6-41.601-41.6z"></path></svg>
                 </a>
 
 
-                <a style="display:none;" href="#PayanPayBashgah" class="nav-link" data-toggle="tooltip-custom" data-placement="top" title="" data-original-title="باشگاه مشتریان">
+                <a style="display:none;" href="#OmidShopBashgah" class="nav-link" data-toggle="tooltip-custom" data-placement="top" title="" data-original-title="باشگاه مشتریان">
                     <svg class="nav-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M239.208 343.937c-17.78 10.103-38.342 15.876-60.255 15.876-21.909 0-42.467-5.771-60.246-15.87C71.544 358.331 42.643 406 32 448h293.912c-10.639-42-39.537-89.683-86.704-104.063zM178.953 120.035c-58.479 0-105.886 47.394-105.886 105.858 0 58.464 47.407 105.857 105.886 105.857s105.886-47.394 105.886-105.857c0-58.464-47.408-105.858-105.886-105.858zm0 186.488c-33.671 0-62.445-22.513-73.997-50.523H252.95c-11.554 28.011-40.326 50.523-73.997 50.523z"></path><g><path d="M322.602 384H480c-10.638-42-39.537-81.691-86.703-96.072-17.781 10.104-38.343 15.873-60.256 15.873-14.823 0-29.024-2.654-42.168-7.49-7.445 12.47-16.927 25.592-27.974 34.906C289.245 341.354 309.146 364 322.602 384zM306.545 200h100.493c-11.554 28-40.327 50.293-73.997 50.293-8.875 0-17.404-1.692-25.375-4.51a128.411 128.411 0 0 1-6.52 25.118c10.066 3.174 20.779 4.862 31.895 4.862 58.479 0 105.886-47.41 105.886-105.872 0-58.465-47.407-105.866-105.886-105.866-37.49 0-70.427 19.703-89.243 49.09C275.607 131.383 298.961 163 306.545 200z"></path></g></svg>
 
                 </a>
 
 
-                <a style="display:none;" href="#PayanPayChargeShopMaker" class="nav-link" data-toggle="tooltip-custom" data-placement="top" title="" data-original-title="فروشگاه ساز شارژ">
+                <a style="display:none;" href="#OmidShopChargeShopMaker" class="nav-link" data-toggle="tooltip-custom" data-placement="top" title="" data-original-title="فروشگاه ساز شارژ">
                     <i style="color: #86a3f7;font-size: 25px" class="dripicons-shopping-bag"></i>
                 </a>
 
@@ -143,41 +143,38 @@ Author: Ali Rahmani
                 </a>
 
 
-                <a style="display:none;" href="#PayanPayBill" class="nav-link" data-toggle="tooltip-custom" data-placement="top" title="" data-original-title="پرداخت قبوض">
+                <a style="display:none;" href="#OmidShopBill" class="nav-link" data-toggle="tooltip-custom" data-placement="top" title="" data-original-title="پرداخت قبوض">
                     <i style="color: #86a3f7;font-size: 25px" class="fas fa-ticket-alt"></i>
 
                 </a>
 
 
-                <a style="display:none;" href="#PayanPayAvarez" class="nav-link" data-toggle="tooltip-custom" data-placement="top" title="" data-original-title="پرداخت عوارض و فروش بلیط">
+                <a style="display:none;" href="#OmidShopAvarez" class="nav-link" data-toggle="tooltip-custom" data-placement="top" title="" data-original-title="پرداخت عوارض و فروش بلیط">
                     <i style="color: #86a3f7;font-size: 25px" class="fas fa-money-check"></i>
 
                 </a>
 
 
-                <a style="display:none;" href="#PayanPayCheck" class="nav-link" data-toggle="tooltip-custom" data-placement="top" title="" data-original-title="استعلام چک">
+                <a style="display:none;" href="#OmidShopCheck" class="nav-link" data-toggle="tooltip-custom" data-placement="top" title="" data-original-title="استعلام چک">
                     <svg class="nav-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M387.581 139.712L356.755 109 216.913 248.319l30.831 30.719 139.837-139.326zM481.172 109L247.744 340.469l-91.39-91.051-30.827 30.715L247.744 403 512 139.712 481.172 109zM0 280.133L123.321 403l30.829-30.713L31.934 249.418 0 280.133z"></path></svg>
                 </a>
 
 
-                <a style="display:none;" href="#PayanPayTPG" class="nav-link" data-toggle="tooltip-custom" data-placement="top" title="" data-original-title="پرداخت تلفنی">
+                <a style="display:none;" href="#OmidShopTPG" class="nav-link" data-toggle="tooltip-custom" data-placement="top" title="" data-original-title="پرداخت تلفنی">
                     <i style="color: #86a3f7;font-size: 25px" class="fas fa-phone"></i>
                 </a>
 
 
-                <a href="#PayanPayMarketing" class="nav-link" data-toggle="tooltip-custom" data-placement="top" title="" data-original-title="مدیریت مارکتینگ">
-                    <i style="color: #86a3f7;font-size: 25px" class="dripicons-user-group"></i>
-                </a>
 
 
-                <!--end PayanPayAuthentication-->
+                <!--end OmidShopAuthentication-->
             </nav>
             <!--end nav-->
         </div>
         <!--end main-icon-menu-->
         <div class="main-menu-inner">
             <div class="menu-body slimscroll">
-                <div id="PayanPayDashboard" class="main-icon-menu-pane">
+                <div id="OmidShopDashboard" class="main-icon-menu-pane">
                     <div class="title-box">
                         <h6 class="menu-title">داشبورد اصلی</h6></div>
                     <ul class="nav">
@@ -188,7 +185,7 @@ Author: Ali Rahmani
                     </ul>
                 </div>
                 <!-- end Analytic -->
-                <div id="PayanPayPardakhtYari" class="main-icon-menu-pane">
+                <div id="OmidShopPardakhtYari" class="main-icon-menu-pane">
                     <div class="title-box">
                         <h6 class="menu-title">پرداخت یاری</h6></div>
                     <ul class="nav">
@@ -200,7 +197,7 @@ Author: Ali Rahmani
                     </ul>
                 </div>
                 <!-- end Crypto -->
-                <div id="PayanPayShopMaker" class="main-icon-menu-pane {{ request()->is('*shop*') == 1 ? 'active' : '' }}">
+                <div id="OmidShopShopMaker" class="main-icon-menu-pane {{ request()->is('*shop*') == 1 ? 'active' : '' }}">
                     <div class="title-box">
                         <h6 class="menu-title">فروشگاه ساز</h6></div>
                     <ul class="nav">
@@ -208,23 +205,23 @@ Author: Ali Rahmani
                         <li class="nav-item"><a class="nav-link" href="{{ route('shops.index') }}"><i class="dripicons-trophy"></i> مدیریت فروشگاه ها</a></li>
                         <li class="nav-item"><a class="nav-link icon-hover" data-toggle="collapse" data-target="#shopproducts" aria-expanded="false" aria-controls="collapseCategory"><i class="far fa-edit"></i>محصولات فروشگاه ها</a></li>
                             <div class="collapse mr-4 {{ request()->is('*shops-products*') == 1 ? 'show' : '' }}" id="shopproducts">
-                            <li class="nav-item"><a class="nav-link" href="{{ route('shops-products.index') }}"><i class="fa fa-copy"></i>جستوجو</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{ route('shops-products.index') }}"><i class="fa fa-copy"></i>جستجو</a></li>
                             <li class="nav-item"><a class="nav-link" href="{{ route('shops-products.show','shops') }}"><i class="fa fa-list-alt"></i>لیست فروشگاه ها</a></li>
                             </div>
                         <li class="nav-item"><a class="nav-link icon-hover" data-toggle="collapse" data-target="#shopvouchers" aria-expanded="false" aria-controls="collapseCategory"><i class="fa fa-calendar"></i>کد های تخفیف فروشگاه ها</a></li>
                             <div class="collapse mr-4 {{ request()->is('*shops-vouchers*') == 1 ? 'show' : '' }}" id="shopvouchers">
-                            <li class="nav-item"><a class="nav-link" href="{{ route('shops-vouchers.index') }}"><i class="fa fa-copy"></i>جستوجو</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{ route('shops-vouchers.index') }}"><i class="fa fa-copy"></i>جستجو</a></li>
                             <li class="nav-item"><a class="nav-link" href="{{ route('shops-vouchers.show','vochers') }}"><i class="fa fa-list-alt"></i>لیست فروشگاه ها</a></li>
                             </div>
                               <li class="nav-item"><a class="nav-link icon-hover" data-toggle="collapse" data-target="#shopcomments" aria-expanded="false" aria-controls="collapseCategory"><i class="fas fa-comment"></i>نظرات فروشگاه ها</a></li>
                             <div class="collapse mr-4 {{ request()->is('*shops-comments*') == 1 ? 'show' : '' }}" id="shopcomments">
-                            <li class="nav-item"><a class="nav-link" href="{{ route('shops-comments.index') }}"><i class="fa fa-copy"></i>جستوجو</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{ route('shops-comments.index') }}"><i class="fa fa-copy"></i>جستجو</a></li>
                             <li class="nav-item"><a class="nav-link" href="{{ route('shops-comments.show','comments') }}"><i class="fa fa-list-alt"></i>لیست فروشگاه ها</a></li>
                             </div>
                     </ul>
                 </div>
                 <!-- end  Project-->
-                <div id="PayanPayBashgah" class="main-icon-menu-pane">
+                <div id="OmidShopBashgah" class="main-icon-menu-pane">
                     <div class="title-box">
                         <h6 class="menu-title">باشگاه مشتریان</h6></div>
                     <ul class="nav">
@@ -233,7 +230,7 @@ Author: Ali Rahmani
                 <!-- end Ecommerce -->
 
 
-                <div id="PayanPayChargeShopMaker" class="main-icon-menu-pane">
+                <div id="OmidShopChargeShopMaker" class="main-icon-menu-pane">
                     <div class="title-box">
                         <h6 class="menu-title">فروشگاه ساز شارژ</h6></div>
                     <ul class="nav">
@@ -242,7 +239,7 @@ Author: Ali Rahmani
                 <!-- end CRM -->
 
 
-                <div id="PayanPayBill" class="main-icon-menu-pane">
+                <div id="OmidShopBill" class="main-icon-menu-pane">
                     <div class="title-box">
                         <h6 class="menu-title">پرداخت قبوض</h6></div>
                     <ul class="nav">
@@ -253,7 +250,7 @@ Author: Ali Rahmani
                 <!-- end CRM -->
 
 
-                <div id="PayanPayAvarez" class="main-icon-menu-pane">
+                <div id="OmidShopAvarez" class="main-icon-menu-pane">
                     <div class="title-box">
                         <h6 class="menu-title">پرداخت عوارض و فروش بلیط</h6></div>
                     <ul class="nav">
@@ -261,7 +258,7 @@ Author: Ali Rahmani
                 </div>
                 <!-- end CRM -->
 
-                <div id="PayanPayCheck" class="main-icon-menu-pane">
+                <div id="OmidShopCheck" class="main-icon-menu-pane">
                     <div class="title-box">
                         <h6 class="menu-title">استعلام چک</h6></div>
                     <ul class="nav">
@@ -274,7 +271,7 @@ Author: Ali Rahmani
 
 
 
-                <div id="PayanPayTPG" class="main-icon-menu-pane">
+                <div id="OmidShopTPG" class="main-icon-menu-pane">
                     <div class="title-box">
                         <h6 class="menu-title">پرداخت تلفنی</h6></div>
                     <ul class="nav">
@@ -285,28 +282,6 @@ Author: Ali Rahmani
                     </ul>
                 </div>
                 <!-- end TPG -->
-
-
-
-                <div id="PayanPayMarketing" class="main-icon-menu-pane">
-                    <div class="title-box">
-                        <h6 class="menu-title">مدیریت مارکتینگ</h6></div>
-                    <ul class="nav">
-                        <li class="nav-item"><a class="nav-link" href="{{ route('chequeInquiry.index') }}"><i class="dripicons-jewel"></i>لیست مشتریان</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{{ route('chequeInquiry.index') }}"><i class="dripicons-jewel"></i> ارتباط با مشتریان</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{{ route('chequeInquiry.index') }}"><i class="dripicons-jewel"></i>خبرنامه ها</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{{ route('chequeInquiry.index') }}"><i class="dripicons-jewel"></i>بلاگ </a></li>
-                        <li class="nav-item"><a class="nav-link" href="{{ route('chequeInquiry.index') }}"><i class="dripicons-jewel"></i>شبکه های اجتماعی </a></li>
-                        <li class="nav-item"><a class="nav-link" href="{{ route('chequeInquiry.index') }}"><i class="dripicons-jewel"></i>ایمیل مارکتینگ </a></li>
-                        <li class="nav-item"><a class="nav-link" href="{{ route('chequeInquiry.index') }}"><i class="dripicons-jewel"></i>اس ام اس مارکتینگ </a></li>
-                        <li class="nav-item"><a class="nav-link" href="{{ route('chequeInquiry.index') }}"><i class="dripicons-jewel"></i>مدیریت رقبا </a></li>
-                        <li class="nav-item"><a class="nav-link" href="{{ route('chequeInquiry.index') }}"><i class="dripicons-jewel"></i>کانال های فروش </a></li>
-                        <li class="nav-item"><a class="nav-link" href="{{ route('chequeInquiry.index') }}"><i class="dripicons-jewel"></i>کمپین های تبلیغاتی </a></li>
-
-                    </ul>
-                </div>
-                <!-- end TPG -->
-
 
 
 

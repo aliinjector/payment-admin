@@ -4,10 +4,10 @@
 
 <head>
     <meta charset="utf-8">
-    <title>پایان پی - ورود به پنل ادمین</title>
+    <title>امید شاپ - ورود به پنل ادمین</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="author" content="Ali Rahmani">
-    <meta name="description" content="راهکار های نوین پرداخت پین پی">
+    <meta name="description" content="راهکار های نوین پرداخت امید شاپ">
     <!-- App favicon -->
     <link rel="shortcut icon" href="/dashboard/assets//images/favicon.ico">
     <!-- App css -->
@@ -30,7 +30,7 @@
                         </div>
                         <!--end auth-logo-box-->
                         <div class="text-center auth-logo-text">
-                            <h4 class="mt-0 mb-3 mt-5">ورود به پنل ادمین پایان پی</h4>
+                            <h4 class="mt-0 mb-3 mt-5">ورود به پنل ادمین امید شاپ</h4>
                             <p class="text-muted mb-0">اطلاعات حساب کاربری خودرا جهت ورود به سیستم وارد نمایید:</p>
                         </div>
                         <!--end auth-logo-text-->

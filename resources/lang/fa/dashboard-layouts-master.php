@@ -10,7 +10,7 @@ return array(
     | as the size rules. Feel free to tweak each of these messages here.
     |
     */
-    "pageTitle"         => "پایان پی - داشبورد اصلی",
+    "pageTitle"         => "امید شاپ - داشبورد اصلی",
     "headerelaan"         => "اعلان",
     "headerelaanTitle"         => "متن اعلان",
     "headerelaanDesc"         => "توضیحات اعلان",
@@ -18,7 +18,7 @@ return array(
     "headertanzimaatVaProfileKarbari"         => " تنظیمات و پروفایل کاربری",
     "headerKifePooleMan"         => "کیف پول من",
     "headerKhoroojAzSystem"         => " خروج از سیستم",
-    "headerJostoJo"         => "جستوجو",
+    "headerJostoJo"         => "جستجو",
     "sideBarTitleDashboardAsli"         => "داشبورد اصلی",
     "sideBarTitlePardakhtYari"         => "پرداخت یاری",
     "sideBarTitleForooshgahSaz"         => "فروشگاه ساز",
