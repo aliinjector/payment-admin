@@ -44,6 +44,10 @@ class ShopCategoryController extends Controller
    */
   public function store(Request $request)
   {
+    $request->validate([
+        'name' => 'required|max:60|regex:/[ا-یa-zA-Z0-9 ]+(?:-[ا-یa-zA-Z0-9 ]+){0,15}/',
+         'description' => 'max:500',
+ ]);
 
     //check if icon is null or not
     // if($request->file('icon') == null){
@@ -122,6 +126,10 @@ class ShopCategoryController extends Controller
    */
   public function update(Request $request, $id)
   {
+    $request->validate([
+        'name' => 'required|max:60|regex:/[ا-یa-zA-Z0-9 ]+(?:-[ا-یa-zA-Z0-9 ]+){0,15}/',
+         'description' => 'max:500',
+ ]);
     //check if icon is null or not
     // if($request->file('icon') == null){
     //   $image = \Auth::user()->shop()->first()->ProductCategories()->where('id',$id)->get()->first()->icon;
