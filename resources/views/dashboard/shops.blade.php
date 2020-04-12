@@ -92,12 +92,12 @@
                                    </td>
                                              <td>{{ jdate($shop->created_at) }}</td>
                                              <td>
-                                               <button type="button" class="btn btn-primary rounded">
+                                               <button type="button" class="btn btn-primary rounded my-2" style="min-width: 145px;">
                                                <a href="{{ isset($action) ? route($action['url'], $shop->id) : route('shops.edit', $shop->id) }}" class="text-white">{{ isset($action) ? $action['name'] : 'تنظیمات' }}
                                                  </a>
 
                                              </button>
-                                               <button type="button" class="btn btn-dropbox rounded">
+                                               <button type="button" class="btn btn-dropbox rounded my-1" style="min-width: 145px;">
                                                <a href="{{ isset($action) ? route($action['trashedUrl'], $shop->id) : 'localhost:8000/login021' }}" class="text-white">{{ isset($action) ? $action['trashed'] : ' ورود به فروشگاه' }}
                                                  </a>
 
