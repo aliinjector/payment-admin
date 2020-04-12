@@ -112,11 +112,11 @@
                                 <td>{{ $user->lastName }}</td>
                                 <td>{{ $user->email }}</td>
                                 <td style="font-family: BYekan!important;">{{ $user->mobile }}</td>
-                                <td><span class="badge badge-primary">{{ $user->status }}</span></td>
-                                <td><span class="badge badge-primary">{{ $user->type }}</span></td>
+                                <td><span class="badge badge-primary">{{ $user->status == 'active' ? 'فعال' : 'غیرفعال' }}</span></td>
+                                <td><span class="badge badge-primary">{{ $user->type == 'user' ? 'کاربر' : 'مشتری' }}</span></td>
                                 <td style="font-family: BYekan; direction: ltr">{{ jdate($user->created_at) }}</td>
                                 <td style="font-family: BYekan; direction: ltr">{{ jdate($user->updated_at) }}</td>
-                                <td><span class="badge badge-primary">{{ $user->userInformation->status }}</span></td>
+                                <td><span class="badge badge-primary">@if($user->userInformation->status == 1)درانتظار تایید شماره موبایل @elseif($user->userInformation->status == 2)درانتظار تایید ایمیل @elseif($user->userInformation->status == 3) درانتظار بارگذاری اطلاعات فردی و آپلود مدارک @elseif($user->userInformation->status == 4) درانتظار تایید اطلاعات فردی و آپلود مدارک @elseif($user->userInformation->status == 5) تایید شده @endif  </span></td>
                                <td><a href="{{ route('user.show', $user->id) }}"> <button type="button" class="btn btn-dark waves-effect success" data-toggle="modal" data-animation="bounce" data-target="#ticketDetail{{$user->id}}">ویرایش و حذف</button></a></td>
                             </tr>
                         @endforeach

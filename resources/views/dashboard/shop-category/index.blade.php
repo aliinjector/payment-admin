@@ -40,7 +40,7 @@
                            class="fas fa-star required-star mr-1"></i>{{ __('dashboard-shop-product-category.addCategoryItem1') }} :</span></div>
                         <input type="text" class="form-control inputfield" value="{{ old('name') }}" name="name" placeholder="{{ __('dashboard-shop-product-category.addCategoryItem1ex') }}">
                      </div>
-                     <div class="input-group mt-3">
+                     {{-- <div class="input-group mt-3">
                         <div class="input-group-prepend min-width-180"><span class="input-group-text bg-light min-width-140" id="basic-addon7">{{ __('dashboard-shop-product-category.addCategoryItem2') }}:</span></div>
                         <select class="form-control inputfield" name="parent_id">
                            <option selected value="null">{{ __('dashboard-shop-product-category.addCategoryItem2Main') }}</option>
@@ -53,17 +53,17 @@
                            @endunless
                            @endforeach
                         </select>
-                     </div>
+                     </div> --}}
                      <div class="input-group mt-3">
                         <div class="input-group-prepend min-width-180"><span class="input-group-text bg-light min-width-140" id="basic-addon7">{{ __('dashboard-shop-product-category.addCategoryItem3') }} :</span></div>
                         <input type="text" class="form-control inputfield" value="{{ old('title') }}" name="description" placeholder="{{ __('dashboard-shop-product-category.addCategoryItem3ex') }}">
                      </div>
-                     <div class="card mt-3">
+                     {{-- <div class="card mt-3">
                         <div class="card-body">
                            <h4 class="mt-0 header-title">{{ __('dashboard-shop-product-category.addCategoryItem4') }}</h4>
                            <input type="file" id="input-file-now" name="icon" class="dropify">
                         </div>
-                     </div>
+                     </div> --}}
                   </div>
                   <!--end form-group-->
             </div>
@@ -98,14 +98,14 @@
                            </button>
                         </h5>
                         <div class="p-3">
-                           <a href="{{ route('shop-category.edit', $parentCategory->id) }}" id="editCat" title="ویرایش"><i class="far fa-edit text-info mr-1 button font-18"></i>
+                           <a href="{{ route('shop-category.edit', $parentCategory->id) }}" id="editCat" title="ویرایش"><i class="far fa-edit text-primary font-18 m-2"></i>
                            </a>
                            <a href="" id="removeCat" data-name="{{ $parentCategory->name }}" title="حذف" data-id="{{ $parentCategory->id }}"><i class="far fa-trash-alt text-danger font-18"></i></a>
                            <a target="_blank" title="مشاهده محصولات دسته بندی"><i class="fa fa-eye text-success mr-1 button font-18"></i></a>
                            <a href=""><i class="fa fa-tasks text-purple mr-1 button font-18" title="ویژگی ها"></i></a>
                         </div>
                      </div>
-                     <div id="collapse{{ $parentCategory->id }}" class="collapse" aria-labelledby="heading{{ $parentCategory->id }}">
+                     {{-- <div id="collapse{{ $parentCategory->id }}" class="collapse" aria-labelledby="heading{{ $parentCategory->id }}">
                         <div class="card-body p-0 p-lg-2 p-md-2">
                            @if($parentCategory->children()->exists())
                            @foreach ($parentCategory->children()->get() as $subCategory)
@@ -118,7 +118,7 @@
                                     </button>
                                  </h5>
                                  <div class="p-3">
-                                    <a href="{{ route('product-category.edit', $subCategory->id) }}" id="editCat" title="ویرایش"><i class="far fa-edit text-info mr-1 button font-18"></i>
+                                    <a href="{{ route('shop-category.edit', $subCategory->id) }}" id="editCat" title="ویرایش"><i class="far fa-edit text-info mr-1 button font-18"></i>
                                     </a>
                                     <a href="" id="removeCat" data-name="{{ $subCategory->name }}" title="حذف" data-id="{{ $subCategory->id }}"><i class="far fa-trash-alt text-danger font-18"></i></a>
                                     <a target="_blank" href="{{ route('category', ['shop'=>$shop->english_name, 'categroyId'=>$subCategory->id, 'name' => $subCategory->name]) }}" title="مشاهده محصولات دسته بندی"><i class="fa fa-eye text-success mr-1 button font-18"></i>
@@ -139,7 +139,7 @@
                                              </button>
                                           </h5>
                                           <div class="p-3">
-                                             <a href="{{ route('product-category.edit', $subSubCategory->id) }}" id="editCat" title="ویرایش"><i
+                                             <a href="{{ route('shop-category.edit', $subSubCategory->id) }}" id="editCat" title="ویرایش"><i
                                                 class="far fa-edit text-info mr-1 button font-18"></i>
                                              </a>
                                              <a href="" title="حذف" id="removeCat" data-name="{{ $subSubCategory->name }}" data-id="{{ $subSubCategory->id }}"><i class="far fa-trash-alt text-danger font-18"></i></a>
@@ -163,7 +163,7 @@
                                                             </button>
                                                          </h5>
                                                          <div class="p-3">
-                                                            <a href="{{ route('product-category.edit', $subSubSubCategory->id) }}" id="editCat" title="ویرایش"><i
+                                                            <a href="{{ route('shop-category.edit', $subSubSubCategory->id) }}" id="editCat" title="ویرایش"><i
                                                                class="far fa-edit text-info mr-1 button font-18"></i>
                                                             </a>
                                                             <a href="" title="حذف" id="removeCat" data-name="{{ $subSubSubCategory->name }}" data-id="{{ $subSubSubCategory->id }}"><i
@@ -189,7 +189,7 @@
                                                                            </button>
                                                                         </h5>
                                                                         <div class="p-3">
-                                                                           <a href="{{ route('product-category.edit', $subSubSubSubCategory->id) }}" id="editCat" title="ویرایش"><i
+                                                                           <a href="{{ route('shop-category.edit', $subSubSubSubCategory->id) }}" id="editCat" title="ویرایش"><i
                                                                               class="far fa-edit text-info mr-1 button font-18"></i>
                                                                            </a>
                                                                            <a href="" title="حذف" id="removeCat" data-name="{{ $subSubSubSubCategory->name }}" data-id="{{ $subSubSubSubCategory->id }}"><i
@@ -225,7 +225,7 @@
                            @endforeach
                            @endif
                         </div>
-                     </div>
+                     </div> --}}
                   </div>
                   @endforeach
                </div>

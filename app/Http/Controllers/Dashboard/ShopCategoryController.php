@@ -107,14 +107,10 @@ class ShopCategoryController extends Controller
    */
   public function edit($id)
   {
-    $category = ProductCategory::find($id);
-    $shop = \Auth::user()->shop()->first();
-    $categoires = \Auth::user()->shop()->first()->ProductCategories()->get();
-    $parentCategories = \Auth::user()->shop()->first()->ProductCategories()->get()->where('parent_id', null);
-    SEOTools::setTitle($shop->name . ' | ویرایش دسته بندی ' . $category->name );
-    SEOTools::setDescription($shop->name);
-    SEOTools::opengraph()->addProperty('type', 'website');
-    return view('dashboard.shop.product-category.edit', compact('categoires', 'shop', 'parentCategories', 'category'));
+    $category = ShopCategory::find($id);
+    $shopCategoires = ShopCategory::all();
+
+    return view('dashboard.shop-category.edit', compact('shopCategoires', 'category'));
   }
 
   /**
@@ -124,28 +120,27 @@ class ShopCategoryController extends Controller
    * @param  \App\ProductCategory  $productCategory
    * @return \Illuminate\Http\Response
    */
-  public function update(ProductCategoryRequest $request, $id)
+  public function update(Request $request, $id)
   {
     //check if icon is null or not
-    if($request->file('icon') == null){
-      $image = \Auth::user()->shop()->first()->ProductCategories()->where('id',$id)->get()->first()->icon;
-    }
-    else{
-      $image = $this->uploadFile($request->file('icon'), false, true);
-    }
+    // if($request->file('icon') == null){
+    //   $image = \Auth::user()->shop()->first()->ProductCategories()->where('id',$id)->get()->first()->icon;
+    // }
+    // else{
+    //   $image = $this->uploadFile($request->file('icon'), false, true);
+    // }
     if($request->parent_id == 'null'){
       $request->parent_id = null;
       }
-      $productCategory = \Auth::user()->shop()->first()->ProductCategories()->where('id',$id)->get()->first()->update([
+      $shopCategory = ShopCategory::where('id', $id)->update([
           'name' => $request->name,
           'parent_id' => $request->parent_id,
           'description' => $request->description,
-          'icon' => $image
       ]);
 
 
       alert()->success(' دسته بندی شما با موفقیت ویرایش شد.', 'ثبت شد');
-      return redirect()->route('product-category.index');
+      return redirect()->route('shop-category.index');
   }
 
   /**
