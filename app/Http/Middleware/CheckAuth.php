@@ -15,8 +15,7 @@ class CheckAuth
      */
     public function handle($request, Closure $next)
     {
-      if(\Route::currentRouteName() != 'login'){
-        if (\Auth::user()->type != 'admin') {
+      if(\Auth::check() && strstr($request->route()->getPrefix(),"dashboard") && \Auth::user()->type != 'admin'){
             return redirect()->route('logout');
             exit;
         } else {
@@ -25,4 +24,3 @@ class CheckAuth
       }
 
     }
-}

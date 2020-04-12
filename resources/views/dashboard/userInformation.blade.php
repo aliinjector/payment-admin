@@ -164,5 +164,8 @@
     <script src="/dashboard/assets/plugins/datatables/responsive.bootstrap4.min.js"></script>
     <script src="/dashboard/assets/plugins/datatables/jquery.datatable.init.js"></script>
 
+    <script>
+        oTable = $('#datatable').DataTable(); //pay attention to capital D, which is mandatory to retrieve "api" datatables' object, as @Lionel said
+    </script>
 
 @stop

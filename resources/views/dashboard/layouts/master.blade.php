@@ -117,7 +117,7 @@ Author: Ali Rahmani
                 </a>
 
 
-                <a href="#OmidShopPardakhtYari" class="nav-link" data-toggle="tooltip-custom" data-placement="top" title="" data-original-title="پرداخت یاری" >
+                <a style="display: none" href="#OmidShopPardakhtYari" class="nav-link" data-toggle="tooltip-custom" data-placement="top" title="" data-original-title="پرداخت یاری" >
                     <svg class="nav-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M435.2 80H76.8c-24.9 0-44.6 19.6-44.6 44L32 388c0 24.4 19.9 44 44.8 44h358.4c24.9 0 44.8-19.6 44.8-44V124c0-24.4-19.9-44-44.8-44zm0 308H76.8V256h358.4v132zm0-220H76.8v-44h358.4v44z"></path></svg>
                 </a>
 
@@ -201,7 +201,6 @@ Author: Ali Rahmani
                     <div class="title-box">
                         <h6 class="menu-title">فروشگاه ساز</h6></div>
                     <ul class="nav">
-                        <li class="nav-item"><a class="nav-link" href="#"><i class="dripicons-view-thumb"></i>گزارشات فروشگاه ها</a></li>
                         <li class="nav-item"><a class="nav-link" href="{{ route('shops.index') }}"><i class="dripicons-trophy"></i> مدیریت فروشگاه ها</a></li>
                         <li class="nav-item"><a class="nav-link icon-hover" data-toggle="collapse" data-target="#shopproducts" aria-expanded="false" aria-controls="collapseCategory"><i class="far fa-edit"></i>محصولات فروشگاه ها</a></li>
                             <div class="collapse mr-4 {{ request()->is('*shops-products*') == 1 ? 'show' : '' }}" id="shopproducts">
@@ -327,12 +326,6 @@ Author: Ali Rahmani
     <!-- App js -->
     <script src="/dashboard/assets/js/app.js"></script>
     <script src="/dashboard/assets/js/sweetalert.min.js"></script>
-    <script src="/dashboard/assets/plugins/datatables/jquery.dataTables.min.js"></script>
-    <script src="/dashboard/assets/plugins/datatables/dataTables.bootstrap4.min.js"></script>
-    <script src="/dashboard/assets/plugins/datatables/dataTables.buttons.min.js"></script>
-    <script src="/dashboard/assets/plugins/datatables/dataTables.responsive.min.js"></script>
-    <script src="/dashboard/assets/plugins/datatables/responsive.bootstrap4.min.js"></script>
-    <script src="/dashboard/assets/plugins/datatables/jquery.datatable.init.js"></script>
     <script src="/dashboard/assets/plugins/dropify/js/dropify.min.js"></script>
     <script src="/dashboard/assets/pages/jquery.form-upload.init.js"></script>
     <script>
