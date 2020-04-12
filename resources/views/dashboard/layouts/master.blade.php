@@ -67,28 +67,10 @@ Author: Ali Rahmani
     <nav class="navbar-custom">
         <ul class="list-unstyled topbar-nav float-right mb-0">
 
-            <li class="dropdown notification-list"><a class="nav-link dropdown-toggle arrow-none waves-light waves-effect" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false"><i class="dripicons-bell noti-icon"></i> <span class="badge badge-danger badge-pill noti-icon-badge">۲</span></a>
-                <div class="dropdown-menu dropdown-lg">
-                    <!-- item-->
-                    <h6 class="dropdown-item-text">اعلان (۲)</h6>
-                    <div class="slimscroll notification-list">
-                        <!-- item-->
-                        <a href="javascript:void(0);" class="dropdown-item notify-item active">
-                            <div class="notify-icon bg-success"><i class="mdi mdi-cart-outline"></i></div>
-                            <p class="notify-details">متن اعلان<small class="text-muted">توضیحات اعلان</small></p>
-                        </a>
-                        <!-- item-->
-                        <a href="javascript:void(0);" class="dropdown-item notify-item">
-                            <div class="notify-icon bg-warning"><i class="mdi mdi-message"></i></div>
-                            <p class="notify-details">متن اعلان<small class="text-muted">توضیحات اعلان</small></p>
-                        </a>
-                        <!-- item-->
-                    </div>
-                    <!-- All--><a href="javascript:void(0);" class="dropdown-item text-center text-primary">مشاهده همه <i class="fi-arrow-right"></i></a></div>
-            </li>
+
             <li class="dropdown">
                 <a class="nav-link dropdown-toggle waves-effect waves-light nav-user" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false"><img src="/dashboard/assets/images/users/noavatar.png" alt="profile-user" class="rounded-circle"> <span class="ml-1 nav-user-name hidden-sm"> {{ \Auth::user()->firstName . ' ' . \Auth::user()->lastName }} <i class="mdi mdi-chevron-down"></i></span></a>
-                <div class="dropdown-menu"><a class="dropdown-item" href="{{ route('setting.index') }}"><i class="dripicons-user text-muted mr-2"></i> تنظیمات و پروفایل کاربری</a> <a class="dropdown-item" href="#"><i class="dripicons-wallet text-muted mr-2"></i> کیف پول من</a> <a class="dropdown-item" href="#"><i class="dripicons-gear text-muted mr-2"></i> تنظیمات حساب </a> <a class="dropdown-item" href="#"><i class="dripicons-lock text-muted mr-2"></i> قفل </a>
+                <div class="dropdown-menu">
                     <div class="dropdown-divider"></div><a class="dropdown-item" href="{{ route('logout') }}"><i class="dripicons-exit text-muted mr-2"></i> خروج از سیستم</a></div>
             </li>
         </ul>
@@ -302,7 +284,7 @@ Author: Ali Rahmani
         <!--end row-->
         </div>
         <!-- container -->
-        <footer class="footer text-center text-sm-left">&copy; ۱۳۹۸ - کلیه حقوق محفوظ است. <span class="text-muted d-none d-sm-inline-block float-right">طراحی و توسعه در دپارتمان فناوری اطلاعات شرکت فناور ستاره نوران</span></footer>
+        <footer class="footer text-center text-sm-left">&copy; ۱۳۹۹ - کلیه حقوق محفوظ است. <span class="text-muted d-none d-sm-inline-block float-right">طراحی و توسعه در دپارتمان فناوری اطلاعات شرکت فناور ستاره نوران</span></footer>
         <!--end footer-->
     </div>
     <!-- end page content -->
