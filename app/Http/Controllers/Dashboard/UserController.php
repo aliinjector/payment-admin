@@ -69,11 +69,6 @@ class UserController extends \App\Http\Controllers\Controller
      else{
        $avatar =  $user->avatar;
      }
-     if($request->info_status != $user->userInformation->status){
-       $userInfo = $user->userInformation->update([
-         'status' => $request->info_status,
-       ]);
-     }
      $user = $user->update([
      'firstName' => $request->firstName,
      'lastName' => $request->lastName,

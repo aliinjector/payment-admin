@@ -133,11 +133,11 @@
                                 <td>{{ $userInformation->shenasnamehPic }}</td>
                                 <td>{{ $userInformation->melliCardPic }}</td>
 
-                                <td>{{ $userInformation->status }}</td>
+                                <td><span class="badge badge-primary">@if($userInformation->status == 1)درانتظار تایید شماره موبایل @elseif($userInformation->status == 2)درانتظار تایید ایمیل @elseif($userInformation->status == 3) درانتظار بارگذاری اطلاعات فردی و آپلود مدارک @elseif($userInformation->status == 4) درانتظار تایید اطلاعات فردی و آپلود مدارک @elseif($userInformation->status == 5) تایید شده @endif  </span></td>
 
                                 <td style="font-family: BYekan; direction: ltr">{{ jdate($userInformation->created_at) }}</td>
                                 <td style="font-family: BYekan; direction: ltr">{{ jdate($userInformation->updated_at) }}</td>
-                               <td><button type="button" class="btn btn-dark waves-effect success" data-toggle="modal" data-animation="bounce" data-target="#ticketDetail{{$userInformation->id}}">ویرایش و حذف</button></td>
+                               <td><a href="{{ route('UserInformation.edit', $userInformation->id) }}"><button type="button" class="btn btn-dark waves-effect success" data-toggle="modal" data-animation="bounce" data-target="#ticketDetail{{$userInformation->id}}">ویرایش</button></a></td>
                             </tr>
                         @endforeach
                         </tbody>

@@ -114,9 +114,10 @@ class UserInformationController extends \App\Http\Controllers\Controller
      * @param  \App\UserInformation  $userInformation
      * @return \Illuminate\Http\Response
      */
-    public function edit(UserInformation $userInformation)
+    public function edit($id)
     {
-        //
+      $userInformation = UserInformation::find($id);
+    return view('dashboard.userInformation-edit', compact('userInformation'));
     }
 
     /**
@@ -126,9 +127,37 @@ class UserInformationController extends \App\Http\Controllers\Controller
      * @param  \App\UserInformation  $userInformation
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, UserInformation $userInformation)
+    public function update(Request $request, $id)
     {
-        //
+      $userInformation = UserInformation::find($id);
+      if($request->zipCode != null and $request->tel != null and $request->nationalCode != null and $request->shenasnamehCode != null){
+
+            $request->merge(['zipCode' => $this->fa_num_to_en($request->zipCode)]);
+            $request->merge(['tel' => $this->fa_num_to_en($request->tel)]);
+            $request->merge(['nationalCode' => $this->fa_num_to_en($request->nationalCode)]);
+            $request->merge(['shenasnamehCode' => $this->fa_num_to_en($request->shenasnamehCode)]);
+          }
+
+          $request->validate([
+            'zipCode' => 'required|digits:10',
+            'tel' => 'required|min:1|max:20',
+            'nationalCode' => 'required|digits:10',
+            'shenasnamehCode' => 'required|digits:10',
+          ]);
+        $userInformation = $userInformation->update([
+          'fatherName' => $request->fatherName,
+          'tel' => $request->tel,
+          'city' => $request->city,
+          'nationalCode' => $request->nationalCode,
+          'shenasnamehCode' => $request->shenasnamehCode,
+          'placeOfIssue' => $request->placeOfIssue,
+          'birthDate' => $request->birthDate,
+          'zipCode' => $request->zipCode,
+          'status' => $request->status,
+        ]);
+        alert()->success('انجام شد', 'اطلاعات بروز شد');
+        return redirect()->route('UserInformation.index');
+
     }
 
     /**
