@@ -106,7 +106,7 @@
                         </thead>
                         <tbody>
                           {{-- {{ dd($users) }} --}}
-                        @foreach ($users as $user)
+                        @foreach ($users->where('id', 1) as $user)
                             <tr>
                                 <td>{{ $user->firstName }}</td>
                                 <td>{{ $user->lastName }}</td>
