@@ -86,7 +86,7 @@
                             <div class="form-group">
                               <label for="setPassword">وضعیت کاربر</label>
                                              <select class="form-control" name="info_status">
-                                                     @for ($i=0; $i <= 5; $i++)
+                                                     @for ($i=1; $i <= 5; $i++)
                                                      <option {{ $user->userInformation->status == $i ? 'selected' : ''}} value="{{ $i }}">@if($i == 1)درانتظار تایید شماره موبایل @elseif($i == 2)درانتظار تایید ایمیل @elseif($i == 3) درانتظار بارگذاری اطلاعات فردی و آپلود مدارک @elseif($i == 4) درانتظار تایید اطلاعات فردی و آپلود مدارک @elseif($i == 5) تایید شده @endif</option>
                                                    @endfor
                                              </select>
