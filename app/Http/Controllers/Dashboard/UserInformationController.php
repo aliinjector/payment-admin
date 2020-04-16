@@ -16,8 +16,9 @@ class UserInformationController extends \App\Http\Controllers\Controller
      */
     public function index()
     {
+        $users = User::where('type', 'user')->get();
         $userInformations = UserInformation::all();
-        return view('dashboard.userInformation', compact('userInformations'));
+        return view('dashboard.userInformation', compact('users','userInformations'));
     }
 
     /**

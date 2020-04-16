@@ -10,7 +10,7 @@ class Template extends Model
 {
 
 
-    // use SoftDeletes, CascadeSoftDeletes;
+    use SoftDeletes, CascadeSoftDeletes;
 
     protected $dates = ['deleted_at'];
 }

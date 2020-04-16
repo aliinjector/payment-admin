@@ -7,12 +7,28 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class ProductCategory extends Model
 {
-    // use SoftDeletes, CascadeSoftDeletes;
-    protected $cascadeDeletes = ['products'];
+    use SoftDeletes, CascadeSoftDeletes;
+    protected $cascadeDeletes = ['products', 'children', 'features'];
 
   protected $dates = ['deleted_at'];
   protected $guarded = ['id'];
   protected $casts = ['icon' => 'array'];
+
+  protected static function boot() {
+      parent::boot();
+      self::restoring(function ($productCategory) {
+        if($productCategory->products()->withTrashed()->first() != null){
+          $productCategory->products()->withTrashed()->first()->restore();
+        }
+        if($productCategory->children()->withTrashed()->first() != null){
+          $productCategory->children()->withTrashed()->first()->restore();
+        }
+          if($productCategory->features()->withTrashed()->first() != null){
+        $productCategory->features()->withTrashed()->first()->restore();
+      }
+
+  });
+}
 
   public function products()
    {

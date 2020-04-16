@@ -25,6 +25,8 @@ Route::namespace('Dashboard')->prefix('dashboard')->middleware('auth')->group(fu
     Route::resource('index', 'DashboardController');
     Route::resource('UserInformation', 'UserInformationController');
     Route::put('user/user-edit/{id}/update', 'UserController@updateUser')->name('user.user-edit.update');
+    Route::post('user/delete', 'UserController@destroy')->name('user.delete');
+    Route::post('user/restore', 'UserController@restore')->name('user.restore');
     Route::resource('user', 'UserController');
     Route::resource('ticket', 'TicketController');
     Route::resource('setting', 'SettingController');
@@ -76,7 +78,7 @@ Route::namespace('Dashboard')->prefix('dashboard')->middleware('auth')->group(fu
     //shop-category
      Route::resource('shop-category', 'ShopCategoryController');
      Route::post('shop-category/delete', 'ShopCategoryController@destroy')->name('shop-category.delete');
-     
+
   });
 
     Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout')->name('logout');

@@ -13,6 +13,14 @@ class Specification extends Model
   protected $dates = ['deleted_at'];
   protected $guarded = ['id'];
 
+  protected static function boot() {
+      parent::boot();
+      self::restoring(function ($specification) {
+        if($specification->items()->withTrashed()->first() != null){
+          $specification->items()->withTrashed()->first()->restore();
+        }
+  });
+}
 
   public function shop()
   {

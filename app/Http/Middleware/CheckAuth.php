@@ -15,7 +15,7 @@ class CheckAuth
      */
     public function handle($request, Closure $next)
     {
-      if(\Auth::check() && strstr($request->route()->getPrefix(),"dashboard") && \Auth::user()->type != 'admin'){
+      if(\Auth::check() && strstr($request->route()->getPrefix(),"dashboard") && \Auth::user()->is_superAdmin != 1){
             return redirect()->route('logout');
             exit;
         } else {

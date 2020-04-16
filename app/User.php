@@ -8,18 +8,18 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 use Iatstuti\Database\Support\CascadeSoftDeletes;
 class User extends Authenticatable
 {
-  // use SoftDeletes, CascadeSoftDeletes, Notifiable;
-  protected $cascadeDeletes = ['addresses', 'userInformation', 'wishlist', 'comments','compare', 'shop', 'purchases', 'cart'];
+  use SoftDeletes, CascadeSoftDeletes, Notifiable;
+  protected $cascadeDeletes = ['addresses', 'userInformation', 'wishlist', 'comments','compare', 'shop', 'purchases', 'cart', 'stats'];
 
   protected $dates = ['deleted_at'];
-    // use HasApiTokens, Notifiable;
+    use HasApiTokens, Notifiable;
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $guarded = [
-        'id'
+        'id', 'status', 'is_superAdmin'
     ];
 
     /**
@@ -39,6 +39,32 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+    protected static function boot() {
+        parent::boot();
+        self::restoring(function ($user) {
+            if($user->addresses()->withTrashed()->first() != null){
+          $user->addresses()->withTrashed()->first()->restore();
+        }
+          if($user->userInformation()->withTrashed()->first() != null){
+          $user->userInformation()->withTrashed()->first()->restore();
+        }
+          if($user->wishlist()->withTrashed()->first() != null){
+          $user->wishlist()->withTrashed()->first()->restore();
+          }
+            if($user->comments()->withTrashed()->first() != null){
+          $user->comments()->withTrashed()->first()->restore();
+          }
+            if($user->compare()->withTrashed()->first() != null){
+          $user->compare()->withTrashed()->first()->restore();
+        }
+          if($user->cart()->withTrashed()->first() != null){
+          $user->cart()->withTrashed()->first()->restore();
+          }
+            if($user->purchases()->withTrashed()->first() != null){
+          $user->purchases()->withTrashed()->first()->restore();
+        }
+    });
+}
 
     public function wallets()
     {
@@ -111,8 +137,5 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\Stat');
     }
-
-
-
 
 }

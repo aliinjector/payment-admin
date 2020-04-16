@@ -7,7 +7,7 @@ use Iatstuti\Database\Support\CascadeSoftDeletes;
 
 class ShopCategory extends Model
 {
-    // use SoftDeletes, CascadeSoftDeletes;
+    use SoftDeletes, CascadeSoftDeletes;
     protected $cascadeDeletes = ['shops'];
     protected $dates = ['deleted_at'];
 

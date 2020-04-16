@@ -91,6 +91,7 @@
                     <table id="datatable" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;text-align: center">
                         <thead>
                         <tr>
+                            <th>شناسه</th>
                             <th>نام</th>
                             <th>نام خانوادگی</th>
                             <th>نام پدر</th>
@@ -113,31 +114,32 @@
 
                         </thead>
                         <tbody>
-                        @foreach ($userInformations as $userInformation)
+                        @foreach ($users as $user)
                             <tr>
-                                <td>{{ $userInformation->user->firstName }}</td>
-                                <td>{{ $userInformation->user->lastName }}</td>
-                                <td>{{ $userInformation->fatherName }}</td>
-                                <td>{{ $userInformation->user->mobile }}</td>
-                                <td style="font-family: BYekan!important;">{{ $userInformation->tel }}</td>
-                                <td><span class="badge badge-primary">{{ $userInformation->city }}</span></td>
-                                <td><span class="badge badge-primary">{{ $userInformation->address }}</span></td>
+                                <td>{{ $user->id }}</td>
+                                <td>{{ $user->firstName }}</td>
+                                <td>{{ $user->lastName }}</td>
+                                <td>{{ $user->userInformation->fatherName }}</td>
+                                <td>{{ $user->mobile }}</td>
+                                <td style="font-family: BYekan!important;">{{ $user->userInformation->tel }}</td>
+                                <td><span class="badge badge-primary">{{ $user->userInformation->city }}</span></td>
+                                <td><span class="badge badge-primary">{{ $user->userInformation->address }}</span></td>
 
-                                <td>{{ $userInformation->nationalCode }}</td>
-                                <td>{{ $userInformation->shenasnamehCode }}</td>
-                                <td>{{ $userInformation->placeOfIssue }}</td>
-                                <td>{{ $userInformation->birthDate }}</td>
-                                <td>{{ $userInformation->zipCode }}</td>
+                                <td>{{ $user->userInformation->nationalCode }}</td>
+                                <td>{{ $user->userInformation->shenasnamehCode }}</td>
+                                <td>{{ $user->userInformation->placeOfIssue }}</td>
+                                <td>{{ $user->userInformation->birthDate }}</td>
+                                <td>{{ $user->userInformation->zipCode }}</td>
 
 
-                                <td>{{ $userInformation->shenasnamehPic }}</td>
-                                <td>{{ $userInformation->melliCardPic }}</td>
+                                <td>{{ $user->userInformation->shenasnamehPic }}</td>
+                                <td>{{ $user->userInformation->melliCardPic }}</td>
 
-                                <td><span class="badge badge-primary">@if($userInformation->status == 1)درانتظار تایید شماره موبایل @elseif($userInformation->status == 2)درانتظار تایید ایمیل @elseif($userInformation->status == 3) درانتظار بارگذاری اطلاعات فردی و آپلود مدارک @elseif($userInformation->status == 4) درانتظار تایید اطلاعات فردی و آپلود مدارک @elseif($userInformation->status == 5) تایید شده @endif  </span></td>
+                                <td><span class="badge badge-primary">@if($user->userInformation->status == 1)درانتظار تایید شماره موبایل @elseif($user->userInformation->status == 2)درانتظار تایید ایمیل @elseif($user->userInformation->status == 3) درانتظار بارگذاری اطلاعات فردی و آپلود مدارک @elseif($user->userInformation->status == 4) درانتظار تایید اطلاعات فردی و آپلود مدارک @elseif($user->userInformation->status == 5) تایید شده @endif  </span></td>
 
-                                <td style="font-family: BYekan; direction: ltr">{{ jdate($userInformation->created_at) }}</td>
-                                <td style="font-family: BYekan; direction: ltr">{{ jdate($userInformation->updated_at) }}</td>
-                               <td><a href="{{ route('UserInformation.edit', $userInformation->id) }}"><button type="button" class="btn btn-dark waves-effect success" data-toggle="modal" data-animation="bounce" data-target="#ticketDetail{{$userInformation->id}}">ویرایش</button></a></td>
+                                <td style="font-family: BYekan; direction: ltr">{{ jdate($user->userInformation->created_at) }}</td>
+                                <td style="font-family: BYekan; direction: ltr">{{ jdate($user->userInformation->updated_at) }}</td>
+                               <td><a href="{{ route('UserInformation.edit', $user->userInformation->id) }}"><button type="button" class="btn btn-dark waves-effect success" data-toggle="modal" data-animation="bounce" data-target="#ticketDetail{{$user->userInformation->id}}">ویرایش</button></a></td>
                             </tr>
                         @endforeach
                         </tbody>

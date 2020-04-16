@@ -6,13 +6,13 @@ use Iatstuti\Database\Support\CascadeSoftDeletes;
 use Cviebrock\EloquentSluggable\Sluggable;
 use Ghanem\Rating\Traits\Ratingable as Rating;
 use Illuminate\Database\Eloquent\Model;
-// use Laravel\Scout\Searchable;
+ use Laravel\Scout\Searchable;
 
 class Product extends Model
 {
-  // use SoftDeletes, Rating, CascadeSoftDeletes, Sluggable, Searchable;
-  use SoftDeletes;
-    protected $cascadeDeletes = ['galleries', 'facilities','rates','comments','cartProduct'];
+   // use SoftDeletes, Rating, CascadeSoftDeletes, Sluggable, Searchable;
+ use SoftDeletes, Rating, CascadeSoftDeletes, Sluggable;
+    protected $cascadeDeletes = ['galleries', 'facilities','rates','comments'];
     protected $dates = ['deleted_at'];
     protected $guarded = ['id'];
     protected $casts = [
@@ -27,7 +27,23 @@ public function sluggable()
            ]
        ];
    }
-
+   protected static function boot() {
+       parent::boot();
+       self::restoring(function ($product) {
+         if($product->galleries()->withTrashed()->first() != null){
+           $product->galleries()->withTrashed()->first()->restore();
+         }
+         if($product->facilities()->withTrashed()->first() != null){
+           $product->facilities()->withTrashed()->first()->restore();
+         }
+           if($product->rates()->withTrashed()->first() != null){
+         $product->rates()->withTrashed()->first()->restore();
+       }
+         if($product->comments()->withTrashed()->first() != null){
+         $product->comments()->withTrashed()->first()->restore();
+       }
+   });
+ }
 
   public function productCategory()
   {

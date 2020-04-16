@@ -18,7 +18,7 @@ class UserController extends \App\Http\Controllers\Controller
      */
     public function index()
     {
-        $users = User::with('userInformation')->get();
+        $users = User::withTrashed()->get();
         $userInformations = UserInformation::all();
         return view('dashboard.user', compact('users', 'userInformations'));
     }
@@ -55,7 +55,6 @@ class UserController extends \App\Http\Controllers\Controller
      */
     public function show(User $user)
     {
-      return view('dashboard.user-edit', compact('user'));
     }
 
 
@@ -89,7 +88,8 @@ class UserController extends \App\Http\Controllers\Controller
      */
     public function edit(User $user)
     {
-        //
+      return view('dashboard.user-edit', compact('user'));
+
     }
 
     /**
@@ -129,20 +129,37 @@ class UserController extends \App\Http\Controllers\Controller
      * @param  \App\User  $User
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Request $request)
-    {
+     public function destroy(Request $request)
+       {
+         $request->validate([
+           'id' => 'required|numeric|min:1|max:10000000000|regex:/^[0-9]+$/u',
+     ]);
+         $user = User::find($request->id);
+         if (\Auth::user()->is_superAdmin != 1) {
+                 alert()->error('شما مجوز مورد نظر را ندارید.', 'انجام نشد');
+                 return redirect()->back();
+               }
+                  $user->delete();
+                  alert()->success('درخواست شما با موفقیت انجام شد.', 'انجام شد');
+                  return redirect()->back();
+      }
 
-       if (!\Auth::user()->users()->find($request->id)->get()){
-           alert()->error('خطا', 'خطا');
-           return redirect()->route('user.index');
-           exit;
-       }
-
-      $User = \Auth::user()->users()->find($request->id)->delete();
 
 
-        alert()->success('کارت بانکی موفقیت حذف شد.', 'انجام شد');
-        return redirect()->route('user.index');
 
-    }
+     public function restore(Request $request)
+       {
+         $request->validate([
+           'id' => 'required|numeric|min:1|max:10000000000|regex:/^[0-9]+$/u',
+     ]);
+         $user = User::withTrashed()->find($request->id);
+         if (\Auth::user()->is_superAdmin != 1) {
+                 alert()->error('شما مجوز مورد نظر را ندارید.', 'انجام نشد');
+                 return redirect()->back();
+               }
+                  $user->restore();
+                  alert()->success('درخواست شما با موفقیت انجام شد.', 'انجام شد');
+                  return redirect()->back();
+      }
+
 }

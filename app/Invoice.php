@@ -8,7 +8,7 @@ use Iatstuti\Database\Support\CascadeSoftDeletes;
 
 class Invoice extends Model
 {
-  // use SoftDeletes, CascadeSoftDeletes;
+  use SoftDeletes, CascadeSoftDeletes;
 
   protected $dates = ['deleted_at'];
   protected $guarded = ['id'];

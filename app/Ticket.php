@@ -1,11 +1,29 @@
 <?php
 namespace App;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
+use Iatstuti\Database\Support\CascadeSoftDeletes;
 
 
 class Ticket extends Model
 {
+  use SoftDeletes, CascadeSoftDeletes;
+
     protected $guarded = ['id'];
+    protected $cascadeDeletes = ['answers', 'buzzes'];
+    protected $dates = ['deleted_at'];
+
+    protected static function boot() {
+        parent::boot();
+        self::restoring(function ($ticket) {
+          if($ticket->answers()->withTrashed()->first() != null){
+            $ticket->answers()->withTrashed()->first()->restore();
+          }
+          if($ticket->buzzes()->withTrashed()->first() != null){
+            $ticket->buzzes()->withTrashed()->first()->restore();
+          }
+    });
+  }
 
     public function user()
     {
