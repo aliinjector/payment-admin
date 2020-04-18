@@ -23,7 +23,7 @@
 
 
 
-    <form method="POST" action="{{ route('UserInformation.update', $userInformation->id ) }}" enctype="multipart/form-data">
+    <form method="POST" action="{{ route('UserInformation.update', $user->userInformation->id ) }}" enctype="multipart/form-data">
     {{ csrf_field() }}
     {{ method_field('put') }}
         <div class="row">
@@ -40,7 +40,7 @@
                                            class="col-sm-2 col-form-label text-center">نام</label>
                                     <div class="col-sm-10">
                                         <input class="form-control" type="text" name="firstName" disabled
-                                               value="{{ $userInformation->user->firstName }}" id="example-text-input">
+                                               value="{{ $user->firstName }}" id="example-text-input">
                                     </div>
                                 </div>
                                 <div class="form-group row">
@@ -48,7 +48,7 @@
                                            class="col-sm-2 col-form-label text-center">نام خانوادگی</label>
                                     <div class="col-sm-10">
                                         <input class="form-control" type="text" name="lastName" disabled
-                                               value="{{ $userInformation->user->lastName }}">
+                                               value="{{ $user->lastName }}">
                                     </div>
                                 </div>
                                 <div class="form-group row">
@@ -56,7 +56,7 @@
                                            class="col-sm-2 col-form-label text-center">نام پدر</label>
                                     <div class="col-sm-10">
                                         <input class="form-control" type="text" name="fatherName"
-                                               value="{{ old('fatherName', $userInformation->fatherName) }}"
+                                               value="{{ old('fatherName', $user->userInformation->fatherName) }}"
                                                placeholder="مثال: رضا">
                                     </div>
                                 </div>
@@ -65,7 +65,7 @@
                                         همراه</label>
                                     <div class="col-sm-10">
                                         <input class="form-control" type="text" name="mob"
-                                               value="{{ $userInformation->user->mobile }}" disabled id="example-tel-input">
+                                               value="{{ $user->mobile }}" disabled id="example-tel-input">
                                     </div>
                                 </div>
 
@@ -74,7 +74,7 @@
                                            class="col-sm-2 col-form-label text-center">شهر</label>
                                     <div class="col-sm-10">
                                         <input class="form-control" type="text" name="city"
-                                               value="{{ old('city', $userInformation->city) }}"
+                                               value="{{ old('city', $user->userInformation->city) }}"
                                                placeholder=" مثال: تهران" id="example-week-input">
                                     </div>
                                 </div>
@@ -83,7 +83,7 @@
                                            class="col-sm-2 col-form-label text-center">آدرس</label>
                                     <div class="col-sm-10">
                                         <input class="form-control" type="text" name="address"
-                                               value="{{ old('address', $userInformation->address) }}"
+                                               value="{{ old('address', $user->userInformation->address) }}"
                                                placeholder="مثال: خیابان پاسداران - گلستان چهارم - پلاک ۲۱ - واحد ۱۱"
                                                id="example-datetime-local-input">
                                     </div>
@@ -97,7 +97,7 @@
                                         ملی</label>
                                     <div class="col-sm-10">
                                         <input class="form-control" type="text" name="nationalCode"
-                                               value="{{ old('nationalCode', $userInformation->nationalCode) }}"
+                                               value="{{ old('nationalCode', $user->userInformation->nationalCode) }}"
                                                placeholder="مثال: ۰۹۲۴۲۴۳۴۴۴" id="example-search-input">
                                     </div>
                                 </div>
@@ -106,7 +106,7 @@
                                         شناسنامه</label>
                                     <div class="col-sm-10">
                                         <input class="form-control" type="text" name="shenasnamehCode"
-                                               value="{{ old('shenasnamehCode', $userInformation->shenasnamehCode) }}"
+                                               value="{{ old('shenasnamehCode', $user->userInformation->shenasnamehCode) }}"
                                                placeholder="مثال: ۰۹۲۴۲۴۳۴۴۴" id="example-url-input">
                                     </div>
                                 </div>
@@ -115,7 +115,7 @@
                                         ثابت</label>
                                     <div class="col-sm-10">
                                         <input class="form-control" type="text" name="tel"
-                                               value="{{ old('tel', $userInformation->tel) }}"
+                                               value="{{ old('tel', $user->userInformation->tel) }}"
                                                placeholder="مثال: 02122222222" id="example-password-input">
                                     </div>
                                 </div>
@@ -124,7 +124,7 @@
                                         صدور</label>
                                     <div class="col-sm-10">
                                         <input class="form-control" type="text" name="placeOfIssue"
-                                               value="{{ old('placeOfIssue', $userInformation->placeOfIssue) }}"
+                                               value="{{ old('placeOfIssue', $user->userInformation->placeOfIssue) }}"
                                                placeholder="مثال: تهران" id="example-url-input">
                                     </div>
                                 </div>
@@ -133,7 +133,7 @@
                                         تولد</label>
                                     <div class="col-sm-10">
                                         <input class="form-control" type="text" name="birthDate"
-                                               value="{{ old('birthDate', $userInformation->birthDate) }}"
+                                               value="{{ old('birthDate', $user->userInformation->birthDate) }}"
                                                placeholder="مثال: ۱۳۶۶/۰۷/۲۷" id="example-date-input">
                                     </div>
                                 </div>
@@ -142,7 +142,7 @@
                                         پستی</label>
                                     <div class="col-sm-10">
                                         <input class="form-control" type="text " name="zipCode"
-                                               value="{{ old('zipCode', $userInformation->zipCode) }}"
+                                               value="{{ old('zipCode', $user->userInformation->zipCode) }}"
                                                placeholder="مثال: ۱۶۶۵۶۶۵۶۶" id="example-week-input">
                                     </div>
                                 </div>
@@ -153,7 +153,7 @@
                                     <div class="col-sm-10">
                                       <select class="form-control" name="status">
                                               @for ($i=1; $i <= 5; $i++)
-                                              <option {{ $userInformation->status == $i ? 'selected' : ''}} value="{{ $i }}">@if($i == 1)درانتظار تایید شماره موبایل @elseif($i == 2)درانتظار تایید ایمیل @elseif($i == 3) درانتظار بارگذاری اطلاعات فردی و آپلود مدارک @elseif($i == 4) درانتظار تایید اطلاعات فردی و آپلود مدارک @elseif($i == 5) تایید شده @endif</option>
+                                              <option {{ $user->userInformation->status == $i ? 'selected' : ''}} value="{{ $i }}">@if($i == 1)درانتظار تایید شماره موبایل @elseif($i == 2)درانتظار تایید ایمیل @elseif($i == 3) درانتظار بارگذاری اطلاعات فردی و آپلود مدارک @elseif($i == 4) درانتظار تایید اطلاعات فردی و آپلود مدارک @elseif($i == 5) تایید شده @endif</option>
                                             @endfor
                                       </select>
                                     </div>

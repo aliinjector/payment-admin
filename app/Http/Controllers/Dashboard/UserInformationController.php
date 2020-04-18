@@ -16,7 +16,7 @@ class UserInformationController extends \App\Http\Controllers\Controller
      */
     public function index()
     {
-        $users = User::where('type', 'user')->get();
+        $users = User::withTrashed()->where('type', 'user')->get();
         $userInformations = UserInformation::all();
         return view('dashboard.userInformation', compact('users','userInformations'));
     }
@@ -117,8 +117,9 @@ class UserInformationController extends \App\Http\Controllers\Controller
      */
     public function edit($id)
     {
-      $userInformation = UserInformation::find($id);
-    return view('dashboard.userInformation-edit', compact('userInformation'));
+      $user = User::withTrashed()->where('type', 'user')->find($id);
+      dd(User::withTrashed()->where('type', 'user')->get()->where('id', $id));
+    return view('dashboard.userInformation-edit', compact('user'));
     }
 
     /**
