@@ -139,7 +139,7 @@
 
                                 <td style="font-family: BYekan; direction: ltr">{{ jdate($user->userInformation->created_at) }}</td>
                                 <td style="font-family: BYekan; direction: ltr">{{ jdate($user->userInformation->updated_at) }}</td>
-                               <td><a href="{{ route('UserInformation.edit', $user->userInformation->id) }}"><button type="button" class="btn btn-dark waves-effect success" data-toggle="modal" data-animation="bounce" data-target="#ticketDetail{{$user->userInformation->id}}">ویرایش</button></a></td>
+                               <td><a href="{{ route('UserInformation.edit', $user->id) }}"><button type="button" class="btn btn-dark waves-effect success" data-toggle="modal" data-animation="bounce" data-target="#ticketDetail{{$user->id}}">ویرایش</button></a></td>
                             </tr>
                         @endforeach
                         </tbody>

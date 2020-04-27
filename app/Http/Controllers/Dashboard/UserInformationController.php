@@ -117,8 +117,7 @@ class UserInformationController extends \App\Http\Controllers\Controller
      */
     public function edit($id)
     {
-      $user = User::withTrashed()->where('type', 'user')->find($id);
-      dd(User::withTrashed()->where('type', 'user')->get()->where('id', $id));
+      $user = User::find($id);
     return view('dashboard.userInformation-edit', compact('user'));
     }
 
