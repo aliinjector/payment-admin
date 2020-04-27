@@ -60,6 +60,9 @@ Route::namespace('Dashboard')->prefix('dashboard')->middleware('auth')->group(fu
     Route::get('shops-vouchers/{shopId}/disabled-vocher', 'ShopVoucherController@disabledVoucher')->name('shops-vouchers.disabled-voucher');
 
 
+    //color
+    Route::resource('color', 'ColorController');
+
     //products
     Route::resource('shops-products', 'ShopProductController');
     Route::get('shops-products/{shopId}/trashed-product', 'ShopProductController@trashedProduct')->name('shops-products.trashed-product');
