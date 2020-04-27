@@ -57,7 +57,7 @@
         <div class="col-lg-3">
             <div class="card card-eco">
                 <div class="card-body">
-                    <h4 class="title-text mt-0">تعداد کاربران فعال (تراکنش هفته) </h4>
+                    <h4 class="title-text mt-0">تعداد کاربران فعال</h4>
                     <div class="d-flex justify-content-between">
                         <h3 class="font-weight-bold"> {{ $userInformations->where('status', '4')->count() }} </h3><i class="dripicons-jewel card-eco-icon text-warning align-self-center"></i></div>
                 </div>
@@ -86,64 +86,66 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-body">
-                    <h4 class="mt-0 header-title">لیست کاربران شما</h4>
+                    <h4 class="mt-0 header-title">لیست کاربران سامانه (احراز هویت)</h4>
                     <p class="text-muted mb-3">در این قسمت، میتوانید لیست کاربران پایان پی را مشاهده و با استفاده از قسمت ویرایش، اطلاعات کاربر را ویرایش و حذف نمایید.</p>
-                    <table id="datatable" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;text-align: center">
-                        <thead>
-                        <tr>
-                            <th>شناسه</th>
-                            <th>نام</th>
-                            <th>نام خانوادگی</th>
-                            <th>نام پدر</th>
-                            <th>موبایل</th>
-                            <th>تلفن ثابت</th>
-                            <th>شهر</th>
-                            <th>آدرس</th>
-                            <th>کد ملی</th>
-                            <th>شماره شناسنامه</th>
-                            <th>محل صدور</th>
-                            <th>تاریخ تولد</th>
-                            <th>کد پستی</th>
-                            <th>مشاهده تصویر کارت ملی</th>
-                            <th>مشاهده تصویر شناسنامه</th>
-                            <th>وضعیت</th>
-                            <th>تاریخ ایجاد</th>
-                            <th>تاریخ آخرین ویرایش</th>
-                            <th>ویرایش</th>
-                        </tr>
-
-                        </thead>
-                        <tbody>
-                        @foreach ($users as $user)
+                    <div class="table-responsive">
+                            <table id="datatable" class="table table-bordered dt-responsive dataTable no-footer font-16" style="border-collapse: collapse; border-spacing: 0px; width: 100%; text-align: center" role="grid">
+                            <thead>
                             <tr>
-                                <td>{{ $user->id }}</td>
-                                <td>{{ $user->firstName }}</td>
-                                <td>{{ $user->lastName }}</td>
-                                <td>{{ $user->userInformation->fatherName }}</td>
-                                <td>{{ $user->mobile }}</td>
-                                <td style="font-family: BYekan!important;">{{ $user->userInformation->tel }}</td>
-                                <td><span class="badge badge-primary">{{ $user->userInformation->city }}</span></td>
-                                <td><span class="badge badge-primary">{{ $user->userInformation->address }}</span></td>
-
-                                <td>{{ $user->userInformation->nationalCode }}</td>
-                                <td>{{ $user->userInformation->shenasnamehCode }}</td>
-                                <td>{{ $user->userInformation->placeOfIssue }}</td>
-                                <td>{{ $user->userInformation->birthDate }}</td>
-                                <td>{{ $user->userInformation->zipCode }}</td>
-
-
-                                <td>{{ $user->userInformation->shenasnamehPic }}</td>
-                                <td>{{ $user->userInformation->melliCardPic }}</td>
-
-                                <td><span class="badge badge-primary">@if($user->userInformation->status == 1)درانتظار تایید شماره موبایل @elseif($user->userInformation->status == 2)درانتظار تایید ایمیل @elseif($user->userInformation->status == 3) درانتظار بارگذاری اطلاعات فردی و آپلود مدارک @elseif($user->userInformation->status == 4) درانتظار تایید اطلاعات فردی و آپلود مدارک @elseif($user->userInformation->status == 5) تایید شده @endif  </span></td>
-
-                                <td style="font-family: BYekan; direction: ltr">{{ jdate($user->userInformation->created_at) }}</td>
-                                <td style="font-family: BYekan; direction: ltr">{{ jdate($user->userInformation->updated_at) }}</td>
-                               <td><a href="{{ route('UserInformation.edit', $user->id) }}"><button type="button" class="btn btn-dark waves-effect success" data-toggle="modal" data-animation="bounce" data-target="#ticketDetail{{$user->id}}">ویرایش</button></a></td>
+                                <th>شناسه</th>
+                                <th>نام</th>
+                                <th>نام خانوادگی</th>
+                                <th>نام پدر</th>
+                                <th>موبایل</th>
+                                <th>تلفن ثابت</th>
+                                <th>شهر</th>
+                                <th>آدرس</th>
+                                {{--<th>کد ملی</th>--}}
+                                {{--<th>شماره شناسنامه</th>--}}
+                                {{--<th>محل صدور</th>--}}
+                                {{--<th>تاریخ تولد</th>--}}
+                                {{--<th>کد پستی</th>--}}
+                                <th>مشاهده تصویر کارت ملی</th>
+                                <th>مشاهده تصویر شناسنامه</th>
+                                <th>وضعیت</th>
+                                <th>تاریخ ایجاد</th>
+                                <th>تاریخ آخرین ویرایش</th>
+                                <th>ویرایش</th>
                             </tr>
-                        @endforeach
-                        </tbody>
-                    </table>
+
+                            </thead>
+                            <tbody>
+                            @foreach ($users as $user)
+                                <tr>
+                                    <td>{{ $user->id }}</td>
+                                    <td>{{ $user->firstName }}</td>
+                                    <td>{{ $user->lastName }}</td>
+                                    <td>{{ $user->userInformation->fatherName }}</td>
+                                    <td>{{ $user->mobile }}</td>
+                                    <td style="font-family: BYekan!important;">{{ $user->userInformation->tel }}</td>
+                                    <td><span class="badge badge-primary">{{ $user->userInformation->city }}</span></td>
+                                    <td><span class="badge badge-primary">{{ $user->userInformation->address }}</span></td>
+
+                                    {{--<td>{{ $user->userInformation->nationalCode }}</td>--}}
+                                    {{--<td>{{ $user->userInformation->shenasnamehCode }}</td>--}}
+                                    {{--<td>{{ $user->userInformation->placeOfIssue }}</td>--}}
+                                    {{--<td>{{ $user->userInformation->birthDate }}</td>--}}
+                                    {{--<td>{{ $user->userInformation->zipCode }}</td>--}}
+
+
+                                    <td>{{ $user->userInformation->shenasnamehPic }}</td>
+                                    <td>{{ $user->userInformation->melliCardPic }}</td>
+
+                                    <td><span class="badge badge-primary">@if($user->userInformation->status == 1)درانتظار تایید شماره موبایل @elseif($user->userInformation->status == 2)درانتظار تایید ایمیل @elseif($user->userInformation->status == 3) درانتظار بارگذاری اطلاعات فردی و آپلود مدارک @elseif($user->userInformation->status == 4) درانتظار تایید اطلاعات فردی و آپلود مدارک @elseif($user->userInformation->status == 5) تایید شده @endif  </span></td>
+
+                                    <td style="font-family: BYekan; direction: ltr">{{ jdate($user->userInformation->created_at) }}</td>
+                                    <td style="font-family: BYekan; direction: ltr">{{ jdate($user->userInformation->updated_at) }}</td>
+                                    <td><a href="{{ route('UserInformation.edit', $user->id) }}"><button type="button" class="btn btn-dark waves-effect success" data-toggle="modal" data-animation="bounce" data-target="#ticketDetail{{$user->userInformation->id}}">ویرایش</button></a></td>
+                                </tr>
+                            @endforeach
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>

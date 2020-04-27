@@ -35,7 +35,7 @@
         <div class="col-lg-3">
             <div class="card card-eco">
                 <div class="card-body">
-                    <h4 class="title-text mt-0">تعداد کاربران احراز هویت شده</h4>
+                    <h4 class="title-text mt-0"> کاربران احراز هویت شده</h4>
                     <div class="d-flex justify-content-between">
                         <h3 class="font-weight-bold">{{ $userInformations->where('status', '=', '5')->count() }}</h3><i class="dripicons-cart card-eco-icon text-secondary align-self-center"></i></div>
                 </div>
@@ -78,7 +78,8 @@
                 <div class="card-body">
                     <h4 class="mt-0 header-title">لیست کاربران سامانه</h4>
                     <p class="text-muted mb-3">در این قسمت، میتوانید لیست کاربران پایان پی را مشاهده و با استفاده از قسمت ویرایش، اطلاعات کاربر را ویرایش و حذف نمایید.</p>
-                    <table id="datatable" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;text-align: center">
+                    <div class="table-responsive">
+                        <table id="datatable" class="table table-bordered dt-responsive dataTable no-footer font-16" style="border-collapse: collapse; border-spacing: 0px; width: 100%; text-align: center" role="grid">
                         <thead>
                         <tr>
                             <th>شناسه</th>
@@ -120,6 +121,7 @@
                         @endforeach
                         </tbody>
                     </table>
+                    </div>
                 </div>
             </div>
         </div>

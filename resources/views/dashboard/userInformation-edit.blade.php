@@ -89,6 +89,18 @@
                                     </div>
                                 </div>
 
+                                <div class="form-group row">
+                                    <label for="example-week-input" class="col-sm-2 col-form-label text-center">
+                                        وضعیت کاربر</label>
+                                    <div class="col-sm-10">
+                                        <select class="form-control" name="status">
+                                            @for ($i=1; $i <= 5; $i++)
+                                                <option {{ $user->userInformation->status == $i ? 'selected' : ''}} value="{{ $i }}">@if($i == 1)درانتظار تایید شماره موبایل @elseif($i == 2)درانتظار تایید ایمیل @elseif($i == 3) درانتظار بارگذاری اطلاعات فردی و آپلود مدارک @elseif($i == 4) درانتظار تایید اطلاعات فردی و آپلود مدارک @elseif($i == 5) تایید شده @endif</option>
+                                            @endfor
+                                        </select>
+                                    </div>
+                                </div>
+
 
                             </div>
                             <div class="col-lg-6">
@@ -147,17 +159,7 @@
                                     </div>
                                 </div>
 
-                                <div class="form-group row">
-                                    <label for="example-week-input" class="col-sm-2 col-form-label text-center">
-                                        وضعیت کاربر</label>
-                                    <div class="col-sm-10">
-                                      <select class="form-control" name="status">
-                                              @for ($i=1; $i <= 5; $i++)
-                                              <option {{ $user->userInformation->status == $i ? 'selected' : ''}} value="{{ $i }}">@if($i == 1)درانتظار تایید شماره موبایل @elseif($i == 2)درانتظار تایید ایمیل @elseif($i == 3) درانتظار بارگذاری اطلاعات فردی و آپلود مدارک @elseif($i == 4) درانتظار تایید اطلاعات فردی و آپلود مدارک @elseif($i == 5) تایید شده @endif</option>
-                                            @endfor
-                                      </select>
-                                    </div>
-                                </div>
+
 
 
                             </div>
