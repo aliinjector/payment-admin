@@ -9,7 +9,7 @@
                 <div class="float-right">
                     <ol style="direction: ltr" class="breadcrumb">
                         <li class="breadcrumb-item"><a href="">مدیریت کاربران</a></li>
-                        <li class="breadcrumb-item active">پنل مدیریت امید شاپ</li>
+                        <li class="breadcrumb-item active">پنل مدیریت پایان پی</li>
                     </ol>
                 </div>
                 <h4 class="page-title">داشبورد اصلی</h4></div>
@@ -47,7 +47,7 @@
         <div class="col-lg-3">
             <div class="card card-eco">
                 <div class="card-body">
-                    <h4 class="title-text mt-0">تعداد کاربران فعال (تراکنش هفته) </h4>
+                    <h4 class="title-text mt-0">تعداد کاربران فعال</h4>
                     <div class="d-flex justify-content-between">
                         <h3 class="font-weight-bold"> {{ $userInformations->where('status', '4')->count() }} </h3><i class="dripicons-jewel card-eco-icon text-warning align-self-center"></i></div>
                 </div>
@@ -76,8 +76,8 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-body">
-                    <h4 class="mt-0 header-title">لیست کاربران شما</h4>
-                    <p class="text-muted mb-3">در این قسمت، میتوانید لیست کاربران امید شاپ را مشاهده و با استفاده از قسمت ویرایش، اطلاعات کاربر را ویرایش و حذف نمایید.</p>
+                    <h4 class="mt-0 header-title">لیست کاربران سامانه</h4>
+                    <p class="text-muted mb-3">در این قسمت، میتوانید لیست کاربران پایان پی را مشاهده و با استفاده از قسمت ویرایش، اطلاعات کاربر را ویرایش و حذف نمایید.</p>
                     <table id="datatable" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;text-align: center">
                         <thead>
                         <tr>

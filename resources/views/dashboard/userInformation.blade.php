@@ -19,7 +19,7 @@
                 <div class="float-right">
                     <ol style="direction: ltr" class="breadcrumb">
                         <li class="breadcrumb-item"><a href="">مدیریت کاربران</a></li>
-                        <li class="breadcrumb-item active">پنل مدیریت امید شاپ</li>
+                        <li class="breadcrumb-item active">پنل مدیریت پایان پی</li>
                     </ol>
                 </div>
                 <h4 class="page-title">داشبورد اصلی</h4></div>
@@ -87,7 +87,7 @@
             <div class="card">
                 <div class="card-body">
                     <h4 class="mt-0 header-title">لیست کاربران شما</h4>
-                    <p class="text-muted mb-3">در این قسمت، میتوانید لیست کاربران امید شاپ را مشاهده و با استفاده از قسمت ویرایش، اطلاعات کاربر را ویرایش و حذف نمایید.</p>
+                    <p class="text-muted mb-3">در این قسمت، میتوانید لیست کاربران پایان پی را مشاهده و با استفاده از قسمت ویرایش، اطلاعات کاربر را ویرایش و حذف نمایید.</p>
                     <table id="datatable" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;text-align: center">
                         <thead>
                         <tr>

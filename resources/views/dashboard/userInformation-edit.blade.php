@@ -8,7 +8,7 @@
                 <div class="float-right">
                     <ol style="direction: ltr" class="breadcrumb">
                         <li class="breadcrumb-item"><a href="">احراز هویت</a></li>
-                        <li class="breadcrumb-item active">داشبورد امید شاپ</li>
+                        <li class="breadcrumb-item active">داشبورد پایان پی</li>
                     </ol>
                 </div>
                 <h4 class="page-title">تکمیل مدارک و احراز هویت </h4></div>
@@ -32,7 +32,7 @@
                     <div class="card-body">
                         <h4 class="mt-0 header-title">مرحله سوم: اطلاعات کاربری</h4>
                         <p class="text-muted mb-3">در این قسمت اطلاعات شخصی و هویتی خود را وارد نموده و مدارک درخواستی
-                            را آپلود نمایید سپس منتظر تایید مدارک و اطلاعات توسط تیم امید شاپ باشید.</p><br>
+                            را آپلود نمایید سپس منتظر تایید مدارک و اطلاعات توسط تیم پایان پی باشید.</p><br>
                         <div class="row">
                             <div class="col-lg-6">
                                 <div class="form-group row">

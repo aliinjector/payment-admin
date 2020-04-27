@@ -23,7 +23,7 @@
                 <div class="float-right">
                     <ol style="direction: ltr" class="breadcrumb">
                         <li class="breadcrumb-item"><a href="">لیست درخواست های تسویه حساب شما</a></li>
-                        <li class="breadcrumb-item active">داشبورد امید شاپ</li>
+                        <li class="breadcrumb-item active">داشبورد پایان پی</li>
                     </ol>
                 </div>
                 <h4 class="page-title">داشبورد اصلی</h4></div>
