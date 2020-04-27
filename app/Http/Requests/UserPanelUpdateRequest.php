@@ -16,7 +16,7 @@ class UserPanelUpdateRequest extends FormRequest
      */
     public function authorize()
     {
-      if(\auth::user()->type == 'admin'){
+      if(\auth::user()->is_superAdmin == 1){
         return true;
       }
       else{
