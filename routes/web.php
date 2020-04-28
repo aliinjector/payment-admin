@@ -49,7 +49,6 @@ Route::namespace('Dashboard')->prefix('dashboard')->middleware('auth')->group(fu
     Route::group(['prefix' => 'shop'], function () {
 
     Route::resource('shops', 'ShopController');
-
     Route::put('shops/{id}/update-contact', 'ShopController@updateContact')->name('shops.update-contact');
     Route::put('shops/change-status/{id}', 'ShopController@changeStatus')->name('shops.change-status');
 
@@ -64,7 +63,8 @@ Route::namespace('Dashboard')->prefix('dashboard')->middleware('auth')->group(fu
     Route::resource('color', 'ColorController');
 
     //products
-    Route::resource('shops-products', 'ShopProductController');
+        Route::post('products/search', 'ShopProductController@search')->name('dashboard.products.search');
+        Route::resource('shops-products', 'ShopProductController');
     Route::get('shops-products/{shopId}/trashed-product', 'ShopProductController@trashedProduct')->name('shops-products.trashed-product');
     Route::post('shops-products/{shopId}/trashed-product/delete', 'ShopProductController@destroy')->name('shops-products.delete');
     Route::put('shops-products/{shopId}/trashed-product/restore', 'ShopProductController@restore')->name('shops-products.restore');

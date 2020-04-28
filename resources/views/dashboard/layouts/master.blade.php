@@ -80,8 +80,13 @@ Author: Ali Rahmani
                 <button class="button-menu-mobile nav-link waves-effect waves-light"><i class="dripicons-menu nav-icon"></i></button>
             </li>
             <li class="hide-phone app-search">
-                <form role="search" class="">
-                    <input type="text" placeholder="نام فروشگاه ..." class="form-control"> <a href="#"><i class="fas fa-search"></i></a></form>
+                <form action="{{ route('dashboard.products.search') }}" method="post" role="search" class="">
+                    @csrf
+                    <input type="text" name="title" placeholder="نام فروشگاه ..." value="{{ isset($title) ? $title : '' }}" class="form-control">
+                    <a href="javascript:;" class="myClass" onclick="$('#submitBtn').click();"><i style="padding-top: 10px" class="fas fa-search"></i></a>
+                    <button type="submit" id="submitBtn" style="display:none;" data-validate="contact-form">Hidden Button</button>
+
+                </form>
             </li>
         </ul>
     </nav>

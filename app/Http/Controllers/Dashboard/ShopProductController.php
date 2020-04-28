@@ -71,6 +71,19 @@ class ShopProductController extends Controller
      }
 
 
+    public function search(Request $request)
+    {
+        $request->validate([
+            'title' => 'required|min:1|max:1000|regex:/^[ا-یa-zA-Z0-9\-۰-۹ء-ي., ]+$/u',
+        ]);
+
+        $title = $request->title;
+        $shops = Shop::all();
+        $action = ['name' => 'محصولات', 'url' => 'shops-products.products', 'trashed' => 'محصولات حذف شده', 'trashedUrl' => 'shops-products.trashed-product'];
+        return view('dashboard.shops' , compact('shops', 'action', 'title'));
+
+    }
+
      public function showProducts($shopId){
        $shop = Shop::find($shopId);
        $products = $shop->products;

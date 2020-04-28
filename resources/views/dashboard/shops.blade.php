@@ -132,7 +132,9 @@
 <script src="/dashboard/assets/plugins/datatables/responsive.bootstrap4.min.js"></script>
 <script src="/dashboard/assets/plugins/datatables/jquery.datatable.init.js"></script>
 <script type="text/javascript">
-$(".change").click(function() {
+    oTable = $('#datatable').DataTable(); //pay attention to capital D, which is mandatory to retrieve "api" datatables' object, as @Lionel said
+
+    $(".change").click(function() {
       var id = $(this).data("id");
       $.ajax({
           url: "/dashboard/shop/shops/change-status/" + id,
@@ -151,5 +153,14 @@ $(".change").click(function() {
       $("span.show" + id).toggleClass("d-none");
       toastr.success('انجام شد.', '', [])
   });
+
+    @if(isset($title))
+
+    $('.dataTables_filter input').val("{{ $title }}");
+    $( '.dataTables_filter input' ).trigger( "keyup" );
+
+    @endif
+
+
 </script>
 @stop
