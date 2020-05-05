@@ -140,10 +140,10 @@ class UserInformationController extends \App\Http\Controllers\Controller
           }
 
           $request->validate([
-            'zipCode' => 'required|digits:10',
-            'tel' => 'required|min:1|max:20',
-            'nationalCode' => 'required|digits:10',
-            'shenasnamehCode' => 'required|digits:10',
+            'zipCode' => 'nullable|digits:10',
+            'tel' => 'nullable|min:1|max:20',
+            'nationalCode' => 'nullable|digits:10',
+            'shenasnamehCode' => 'nullable|digits:10',
           ]);
         $userInformation = $userInformation->update([
           'fatherName' => $request->fatherName,
